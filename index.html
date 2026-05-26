@@ -3,1219 +3,1460 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Estratégia de Vendas — Cursos ESA/OAB | 247ª Subseção</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+<title>Secretaria · Subseção OAB/SP Santana de Parnaíba</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --azul: #0d3b6e;
-    --azul-medio: #1a5fa8;
-    --azul-claro: #d6e8f7;
-    --azul-palido: #eef5fc;
-    --ouro: #c9a84c;
-    --ouro-claro: #f5edda;
-    --texto: #1a1a2e;
-    --texto-sec: #4a5568;
-    --borda: #c9d9ec;
-    --branco: #ffffff;
-    --cinza-fundo: #f4f7fb;
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    font-family: 'Source Sans 3', sans-serif;
-    background: var(--cinza-fundo);
-    color: var(--texto);
-    min-height: 100vh;
-  }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  /* HEADER */
-  .site-header {
-    background: var(--azul);
-    padding: 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 12px rgba(13,59,110,0.18);
-  }
-  .header-inner {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 64px;
-  }
-  .header-brand {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-  }
-  .header-escudo {
-    width: 38px;
-    height: 38px;
-    background: var(--ouro);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-    font-size: 15px;
-    color: var(--azul);
-    flex-shrink: 0;
-  }
-  .header-titles h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 16px;
-    font-weight: 600;
-    color: #fff;
-    line-height: 1.2;
-  }
-  .header-titles p {
-    font-size: 11px;
-    color: rgba(255,255,255,0.65);
-    letter-spacing: 0.04em;
-    margin-top: 1px;
-  }
-  .header-badge {
-    background: var(--ouro);
-    color: var(--azul);
-    font-size: 11px;
-    font-weight: 600;
-    padding: 4px 12px;
-    border-radius: 20px;
-    letter-spacing: 0.03em;
-  }
+:root {
+  --navy: #0B1F4B;
+  --navy-2: #0D2560;
+  --navy-3: #1A3A7C;
+  --gold: #B8860B;
+  --gold-light: #D4A017;
+  --gold-pale: #FBF6E9;
+  --gold-line: #E8D48A;
+  --text: #1C2437;
+  --text2: #526080;
+  --text3: #8A9BBB;
+  --bg: #F0F3F9;
+  --white: #FFFFFF;
+  --border: #DDE3F0;
+  --border2: #C8D2E8;
+  --green: #1A6B3C;
+  --green-bg: #EDF7F2;
+  --green-bd: #A8D9BC;
+  --amber: #7A4D0A;
+  --amber-bg: #FEF8EE;
+  --amber-bd: #E8C67A;
+  --blue-bg: #EEF3FC;
+  --blue-bd: #B5CAED;
+  --blue-text: #1E3E8C;
+  --red-bg: #FEF1F1;
+  --red-bd: #F0B8B8;
+  --red-text: #8B1A1A;
+  --r: 8px;
+}
 
-  /* NAV TABS */
-  .nav-tabs {
-    background: #fff;
-    border-bottom: 1px solid var(--borda);
-    position: sticky;
-    top: 64px;
-    z-index: 99;
-  }
-  .nav-inner {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    display: flex;
-    gap: 0;
-    overflow-x: auto;
-    scrollbar-width: none;
-  }
-  .nav-inner::-webkit-scrollbar { display: none; }
-  .nav-tab {
-    padding: 14px 20px;
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--texto-sec);
-    border: none;
-    background: transparent;
-    cursor: pointer;
-    border-bottom: 3px solid transparent;
-    white-space: nowrap;
-    transition: color 0.2s, border-color 0.2s;
-    letter-spacing: 0.02em;
-  }
-  .nav-tab:hover { color: var(--azul-medio); }
-  .nav-tab.active {
-    color: var(--azul);
-    border-bottom-color: var(--azul);
-    font-weight: 600;
-  }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 13.5px;
+  line-height: 1.65;
+}
 
-  /* MAIN */
-  .main {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 2rem 2rem 4rem;
-  }
-  .section { display: none; }
-  .section.active { display: block; }
+/* ─── HEADER ─────────────────────────── */
+.header {
+  background: var(--navy);
+  position: sticky; top: 0; z-index: 100;
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
 
-  /* HERO CARD */
-  .hero-card {
-    background: var(--azul);
-    border-radius: 14px;
-    padding: 2.5rem 2.5rem 2rem;
-    margin-bottom: 1.5rem;
-    position: relative;
-    overflow: hidden;
-  }
-  .hero-card::before {
-    content: '';
-    position: absolute;
-    right: -40px;
-    top: -40px;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background: rgba(201,168,76,0.12);
-  }
-  .hero-card::after {
-    content: '';
-    position: absolute;
-    right: 60px;
-    bottom: -60px;
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.04);
-  }
-  .hero-card h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 26px;
-    font-weight: 700;
-    color: #fff;
-    margin-bottom: 8px;
-    position: relative;
-    z-index: 1;
-  }
-  .hero-card p {
-    font-size: 14px;
-    color: rgba(255,255,255,0.72);
-    max-width: 560px;
-    line-height: 1.6;
-    position: relative;
-    z-index: 1;
-  }
-  .hero-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 1.2rem;
-    position: relative;
-    z-index: 1;
-  }
-  .hero-tag {
-    background: rgba(255,255,255,0.12);
-    color: rgba(255,255,255,0.85);
-    border: 1px solid rgba(255,255,255,0.2);
-    border-radius: 20px;
-    font-size: 11px;
-    padding: 4px 12px;
-    letter-spacing: 0.03em;
-  }
+.header-inner {
+  display: flex; align-items: center; gap: 0;
+  padding: 0 28px;
+  height: 58px;
+}
 
-  /* GRID DE MÉTRICAS */
-  .metrics-row {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-  }
-  .metric-card {
-    background: #fff;
-    border: 1px solid var(--borda);
-    border-radius: 10px;
-    padding: 1.2rem 1rem;
-    text-align: center;
-    border-top: 3px solid var(--azul-medio);
-  }
-  .metric-num {
-    font-family: 'Playfair Display', serif;
-    font-size: 28px;
-    font-weight: 700;
-    color: var(--azul);
-  }
-  .metric-label {
-    font-size: 12px;
-    color: var(--texto-sec);
-    margin-top: 4px;
-    line-height: 1.4;
-  }
+.logo-block {
+  display: flex; align-items: center; gap: 13px;
+  flex-shrink: 0;
+  padding-right: 24px;
+  border-right: 1px solid rgba(255,255,255,.1);
+}
 
-  /* CARDS */
-  .card {
-    background: #fff;
-    border: 1px solid var(--borda);
-    border-radius: 12px;
-    padding: 1.4rem 1.6rem;
-    margin-bottom: 1rem;
-  }
-  .card-header {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 1rem;
-    padding-bottom: 0.8rem;
-    border-bottom: 1px solid var(--azul-claro);
-  }
-  .card-icon {
-    width: 34px;
-    height: 34px;
-    background: var(--azul-palido);
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--azul);
-    font-size: 17px;
-    flex-shrink: 0;
-  }
-  .card-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--azul);
-  }
-  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-  @media (max-width: 650px) { .grid2 { grid-template-columns: 1fr; } }
+.logo-shield {
+  width: 42px; height: 52px; flex-shrink: 0;
+}
 
-  /* LISTA */
-  .lista { list-style: none; }
-  .lista li {
-    font-size: 14px;
-    color: var(--texto-sec);
-    padding: 6px 0;
-    border-bottom: 1px solid var(--cinza-fundo);
-    display: flex;
-    align-items: flex-start;
-    gap: 8px;
-    line-height: 1.5;
-  }
-  .lista li:last-child { border-bottom: none; }
-  .lista li::before {
-    content: '▸';
-    color: var(--azul-medio);
-    font-size: 12px;
-    margin-top: 2px;
-    flex-shrink: 0;
-  }
+.logo-text { line-height: 1.2; }
+.logo-oab {
+  font-family: 'Playfair Display', serif;
+  font-size: 15px; font-weight: 700;
+  color: var(--gold-line);
+  letter-spacing: .5px;
+}
+.logo-sub {
+  font-size: 10px; font-weight: 400;
+  color: rgba(255,255,255,.45);
+  letter-spacing: .8px;
+  text-transform: uppercase;
+  margin-top: 1px;
+}
 
-  /* ETAPAS FUNIL */
-  .etapas { display: flex; flex-direction: column; gap: 0; }
-  .etapa {
-    display: flex;
-    gap: 0;
-    position: relative;
-  }
-  .etapa-linha {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 48px;
-    flex-shrink: 0;
-  }
-  .etapa-num {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background: var(--azul);
-    color: #fff;
-    font-family: 'Playfair Display', serif;
-    font-size: 16px;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    position: relative;
-    z-index: 1;
-  }
-  .etapa-conector {
-    width: 2px;
-    flex: 1;
-    background: var(--azul-claro);
-    min-height: 24px;
-  }
-  .etapa:last-child .etapa-conector { display: none; }
-  .etapa-body {
-    padding: 0 0 1.6rem 1rem;
-    flex: 1;
-  }
-  .etapa-body h4 {
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--azul);
-    margin-bottom: 4px;
-  }
-  .etapa-body p {
-    font-size: 13px;
-    color: var(--texto-sec);
-    line-height: 1.55;
-  }
-  .etapa-tag {
-    display: inline-block;
-    font-size: 10px;
-    background: var(--azul-claro);
-    color: var(--azul);
-    border-radius: 4px;
-    padding: 2px 7px;
-    margin-bottom: 5px;
-    font-weight: 600;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-  }
+.header-mid {
+  flex: 1;
+  padding: 0 20px;
+}
+.header-mid-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 13.5px; font-weight: 600;
+  color: rgba(255,255,255,.88);
+  letter-spacing: .2px;
+}
+.header-mid-sub {
+  font-size: 10.5px; color: rgba(255,255,255,.38);
+  font-weight: 300; margin-top: 1px;
+}
 
-  /* TEXTOS / MSG BOXES */
-  .msg-wrapper { margin-bottom: 1.4rem; }
-  .msg-label-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 6px;
-  }
-  .msg-label {
-    font-size: 11px;
-    font-weight: 600;
-    color: var(--azul);
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-  }
-  .copy-btn {
-    font-size: 11px;
-    border: 1px solid var(--borda);
-    border-radius: 5px;
-    padding: 3px 12px;
-    background: #fff;
-    color: var(--azul-medio);
-    cursor: pointer;
-    font-weight: 500;
-    transition: background 0.15s, color 0.15s;
-  }
-  .copy-btn:hover { background: var(--azul-palido); color: var(--azul); }
-  .copy-btn.copiado { background: var(--azul); color: #fff; border-color: var(--azul); }
-  .msg-box {
-    background: var(--azul-palido);
-    border-left: 4px solid var(--azul-medio);
-    border-radius: 0 10px 10px 0;
-    padding: 1rem 1.2rem;
-    font-size: 13.5px;
-    color: var(--texto);
-    line-height: 1.7;
-    white-space: pre-wrap;
-  }
-  .assunto-line {
-    font-size: 12px;
-    color: var(--azul);
-    background: var(--azul-claro);
-    border-radius: 5px;
-    padding: 4px 10px;
-    margin-bottom: 8px;
-    display: inline-block;
-    font-weight: 600;
-  }
+.header-right {
+  font-size: 10.5px; color: rgba(255,255,255,.38);
+  text-align: right; line-height: 1.8;
+  flex-shrink: 0;
+}
+.header-right b { color: var(--gold-line); font-weight: 500; font-size: 11.5px; }
 
-  /* OBJEÇÕES */
-  .objecao {
-    border: 1px solid var(--borda);
-    border-radius: 10px;
-    overflow: hidden;
-    margin-bottom: 0.85rem;
-  }
-  .objecao-q {
-    background: var(--azul-palido);
-    padding: 0.85rem 1.2rem;
-    font-size: 13.5px;
-    font-weight: 600;
-    color: var(--azul);
-    display: flex;
-    align-items: flex-start;
-    gap: 8px;
-  }
-  .objecao-q::before { content: '❝'; color: var(--ouro); font-size: 18px; flex-shrink: 0; line-height: 1; }
-  .objecao-r {
-    padding: 0.85rem 1.2rem;
-    font-size: 13.5px;
-    color: var(--texto-sec);
-    line-height: 1.6;
-    display: flex;
-    align-items: flex-start;
-    gap: 8px;
-  }
-  .objecao-r::before { content: '→'; color: var(--azul-medio); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+/* ─── TABS ─────────────────────────────── */
+.tabs-wrap {
+  background: var(--navy-2);
+  border-top: 1px solid rgba(255,255,255,.05);
+  overflow-x: auto; scrollbar-width: none;
+}
+.tabs-wrap::-webkit-scrollbar { display: none; }
+.tabs {
+  display: flex;
+  padding: 0 28px;
+  min-width: max-content;
+}
+.tab {
+  padding: 9px 15px 10px;
+  font-size: 12px; font-weight: 500;
+  color: rgba(255,255,255,.38);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+  transition: color .15s, border-color .15s;
+  display: flex; align-items: center; gap: 6px;
+  letter-spacing: .1px;
+}
+.tab:hover { color: rgba(255,255,255,.65); }
+.tab.on { color: var(--gold-light); border-bottom-color: var(--gold); }
+.tab .ti { font-size: 12px; }
 
-  /* CANAIS */
-  .canal-card {
-    background: #fff;
-    border: 1px solid var(--borda);
-    border-radius: 12px;
-    padding: 1.4rem;
-    margin-bottom: 1rem;
-  }
-  .canal-header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 1rem;
-  }
-  .canal-icon {
-    width: 42px;
-    height: 42px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    flex-shrink: 0;
-  }
-  .canal-icon.wpp { background: #e8f5e9; color: #388e3c; }
-  .canal-icon.email { background: var(--azul-palido); color: var(--azul); }
-  .canal-icon.presencial { background: var(--ouro-claro); color: #7a5c00; }
-  .canal-icon.insta { background: #fce4ec; color: #c2185b; }
-  .canal-titulo { font-family: 'Playfair Display', serif; font-size: 15px; font-weight: 600; color: var(--azul); }
-  .canal-badge { font-size: 10px; background: var(--azul); color: #fff; border-radius: 3px; padding: 2px 7px; margin-top: 2px; display: inline-block; letter-spacing: 0.04em; }
-  .canal-badge.ouro { background: var(--ouro); color: var(--azul); }
+/* ─── MAIN ──────────────────────────────── */
+.main {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 28px 20px 72px;
+}
 
-  /* CALENDÁRIO */
-  .cal-row {
-    display: flex;
-    align-items: flex-start;
-    gap: 14px;
-    padding: 0.9rem 0;
-    border-bottom: 1px solid var(--cinza-fundo);
-  }
-  .cal-row:last-child { border-bottom: none; }
-  .cal-dia {
-    min-width: 52px;
-    text-align: center;
-    background: var(--azul);
-    color: #fff;
-    border-radius: 8px;
-    padding: 6px 4px;
-    font-size: 13px;
-    font-weight: 700;
-    font-family: 'Playfair Display', serif;
-    flex-shrink: 0;
-  }
-  .cal-dia span { display: block; font-size: 9px; font-family: 'Source Sans 3', sans-serif; font-weight: 400; opacity: 0.8; margin-top: 1px; text-transform: uppercase; letter-spacing: 0.03em; }
-  .cal-info h4 { font-size: 13.5px; font-weight: 600; color: var(--azul); margin-bottom: 3px; }
-  .cal-info p { font-size: 13px; color: var(--texto-sec); line-height: 1.5; }
+.pane { display: none; }
+.pane.on { display: block; }
 
-  /* METAS */
-  .kpi-list { list-style: none; }
-  .kpi-list li {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 8px 0;
-    border-bottom: 1px solid var(--cinza-fundo);
-    font-size: 13.5px;
-    color: var(--texto-sec);
-  }
-  .kpi-list li:last-child { border-bottom: none; }
-  .kpi-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: var(--azul-medio);
-    flex-shrink: 0;
-  }
-  .checklist-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 7px 0;
-    border-bottom: 1px solid var(--cinza-fundo);
-    font-size: 13.5px;
-    color: var(--texto-sec);
-    line-height: 1.4;
-  }
-  .checklist-item:last-child { border-bottom: none; }
-  .check-box {
-    width: 18px;
-    height: 18px;
-    border-radius: 4px;
-    background: var(--azul-claro);
-    border: 1.5px solid var(--azul-medio);
-    cursor: pointer;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.15s;
-  }
-  .check-box.checked { background: var(--azul); border-color: var(--azul); }
-  .check-box.checked::after { content: '✓'; color: #fff; font-size: 11px; font-weight: 700; }
+/* ─── SECTION HEADER ─────────────────────── */
+.sec-head {
+  margin-bottom: 22px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: flex-start; gap: 14px;
+}
+.sec-icon {
+  width: 38px; height: 38px; border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px; flex-shrink: 0; margin-top: 1px;
+}
+.sec-head h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px; color: var(--navy);
+  line-height: 1.2; margin-bottom: 4px;
+}
+.sec-head p { font-size: 12.5px; color: var(--text2); max-width: 620px; }
 
-  /* ARGUMENTO FINAL */
-  .argumento {
-    background: var(--azul);
-    border-radius: 12px;
-    padding: 1.8rem 2rem;
-    color: #fff;
-    position: relative;
-    overflow: hidden;
-    margin-top: 1rem;
-  }
-  .argumento::before {
-    content: '❝';
-    position: absolute;
-    right: 1.5rem;
-    top: 0.5rem;
-    font-size: 80px;
-    color: rgba(201,168,76,0.2);
-    font-family: 'Playfair Display', serif;
-    line-height: 1;
-  }
-  .argumento p {
-    font-size: 15px;
-    line-height: 1.75;
-    color: rgba(255,255,255,0.92);
-    position: relative;
-    z-index: 1;
-  }
-  .argumento .attr {
-    font-size: 12px;
-    color: var(--ouro);
-    margin-top: 1rem;
-    font-weight: 600;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-  }
+/* ─── GRID ───────────────────────────────── */
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; }
+.span2 { grid-column: 1 / -1; }
 
-  /* FOOTER */
-  .site-footer {
-    background: var(--azul);
-    color: rgba(255,255,255,0.5);
-    text-align: center;
-    font-size: 12px;
-    padding: 1.2rem;
-    margin-top: 2rem;
-  }
-  .site-footer span { color: var(--ouro); }
+/* ─── CARD ───────────────────────────────── */
+.card {
+  background: var(--white);
+  border-radius: var(--r);
+  border: 1px solid var(--border);
+  box-shadow: 0 1px 2px rgba(11,31,75,.04), 0 4px 16px rgba(11,31,75,.04);
+  display: flex; flex-direction: column;
+  transition: box-shadow .18s, border-color .18s;
+  overflow: hidden;
+}
+.card:hover {
+  box-shadow: 0 2px 8px rgba(11,31,75,.07), 0 12px 32px rgba(11,31,75,.07);
+  border-color: var(--border2);
+}
 
-  /* PRINT */
-  @media print {
-    .site-header, .nav-tabs { position: static; }
-    .section { display: block !important; }
-    .nav-tabs { display: none; }
-    body { background: #fff; }
-  }
+.card-head {
+  padding: 14px 16px 12px;
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: flex-start; gap: 10px;
+}
+.ch-icon {
+  width: 32px; height: 32px; border-radius: 7px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px; flex-shrink: 0;
+}
+.ch-title { font-size: 13.5px; font-weight: 600; color: var(--navy); line-height: 1.3; }
+.ch-sub { font-size: 11px; color: var(--text3); margin-top: 2px; }
+
+.card-body { padding: 14px 16px 16px; flex: 1; display: flex; flex-direction: column; gap: 10px; }
+
+/* ─── STEPS ─────────────────────────────── */
+.steps { list-style: none; }
+.step {
+  display: flex; gap: 9px; align-items: flex-start;
+  padding: 6px 0;
+  border-bottom: 1px solid #F0F4FB;
+}
+.step:last-child { border: none; padding-bottom: 0; }
+.snum {
+  min-width: 18px; height: 18px; border-radius: 50%;
+  background: var(--navy); color: #fff;
+  font-size: 9.5px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; margin-top: 2px;
+}
+.stxt { font-size: 12.5px; color: var(--text); line-height: 1.5; }
+.stxt em { font-style: normal; font-weight: 600; color: var(--navy-3); }
+
+/* ─── CHIPS ─────────────────────────────── */
+.chips { display: flex; flex-wrap: wrap; gap: 5px; }
+.chip {
+  font-size: 10px; font-weight: 500;
+  padding: 2px 8px; border-radius: 20px;
+  border: 1px solid transparent;
+}
+.cg { background: var(--green-bg); color: var(--green); border-color: var(--green-bd); }
+.ca { background: var(--amber-bg); color: var(--amber); border-color: var(--amber-bd); }
+.cb { background: var(--blue-bg); color: var(--blue-text); border-color: var(--blue-bd); }
+.cr { background: var(--red-bg); color: var(--red-text); border-color: var(--red-bd); }
+.cp { background: #F5F0FD; color: #5B21B6; border-color: #D4C5F5; }
+
+/* ─── NOTICE ────────────────────────────── */
+.notice {
+  display: flex; gap: 8px; align-items: flex-start;
+  padding: 8px 10px; border-radius: 6px;
+  font-size: 12px; line-height: 1.5; border-left: 3px solid;
+}
+.ng { background: var(--green-bg); border-color: #4CAF7D; color: var(--green); }
+.na { background: var(--amber-bg); border-color: #D4A017; color: var(--amber); }
+.nb { background: var(--blue-bg); border-color: #4A7FD4; color: var(--blue-text); }
+
+/* ─── LINKS ─────────────────────────────── */
+.links { display: flex; flex-wrap: wrap; gap: 6px; }
+.lk {
+  font-size: 11.5px; font-weight: 500;
+  padding: 4px 10px; border-radius: 5px;
+  text-decoration: none;
+  transition: opacity .15s;
+  display: inline-flex; align-items: center; gap: 4px;
+  border: 1px solid transparent;
+}
+.lk:hover { opacity: .75; }
+.lb { background: var(--blue-bg); color: var(--blue-text); border-color: var(--blue-bd); }
+.lg { background: var(--gold-pale); color: #6B4800; border-color: #D4C080; }
+
+/* ─── MESSAGE BOX ───────────────────────── */
+.msgbox {
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  overflow: hidden;
+  margin-top: 4px;
+}
+.msgbox-top {
+  background: var(--navy);
+  padding: 7px 10px 7px 12px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.msgbox-label {
+  font-size: 10px; font-weight: 500;
+  letter-spacing: .8px; text-transform: uppercase;
+  color: rgba(255,255,255,.45);
+}
+.msgbox-label span { color: var(--gold-line); }
+.copy-btn {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10.5px; font-weight: 500;
+  padding: 3px 9px; border-radius: 4px;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.15);
+  color: rgba(255,255,255,.6);
+  cursor: pointer;
+  transition: background .15s;
+  white-space: nowrap;
+}
+.copy-btn:hover { background: rgba(255,255,255,.15); }
+.copy-btn.ok { background: rgba(70,210,120,.18); border-color: rgba(70,210,120,.35); color: #7DDEA8; }
+
+.msgbox-body {
+  padding: 11px 13px;
+  font-size: 12px;
+  color: var(--text2);
+  line-height: 1.8;
+  white-space: pre-line;
+  background: #FAFBFE;
+  border-top: 1px solid var(--border);
+  user-select: text;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* ─── ORIENT CARD ───────────────────────── */
+.orient-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--gold);
+  border-radius: var(--r);
+  padding: 16px 20px;
+  margin-bottom: 20px;
+  display: flex; gap: 14px; align-items: flex-start;
+}
+.orient-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; }
+.orient-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 13.5px; color: var(--navy); font-weight: 600;
+  margin-bottom: 6px;
+}
+.orient-text {
+  font-size: 12.5px; color: var(--text2); line-height: 1.65;
+  margin-bottom: 10px;
+}
+.orient-links { display: flex; gap: 7px; flex-wrap: wrap; }
+
+/* ─── CHECKLIST ─────────────────────────── */
+.ckl { list-style: none; }
+.ckl li {
+  display: flex; gap: 7px; font-size: 12.5px;
+  padding: 5px 0; border-bottom: 1px solid #F0F4FB;
+  color: var(--text);
+}
+.ckl li:last-child { border: none; }
+.ckl li::before { content: '✓'; color: var(--green); font-weight: 700; flex-shrink: 0; }
+
+/* ─── TWO-COL ────────────────────────────── */
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+@media (max-width: 480px) { .two { grid-template-columns: 1fr; } }
+.slabel { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--text3); margin-bottom: 6px; }
+
+/* ─── RESPONSIVE ─────────────────────────── */
+@media (max-width: 680px) {
+  .header-inner { padding: 0 14px; height: auto; min-height: 54px; flex-wrap: wrap; gap: 10px; padding-top: 10px; padding-bottom: 10px; }
+  .tabs { padding: 0 14px; }
+  .main { padding: 16px 12px 56px; }
+  .grid { grid-template-columns: 1fr; }
+  .header-right { display: none; }
+}
+
+/* ─── ANIM ───────────────────────────────── */
+@keyframes fadeUp { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:none; } }
+.pane.on .card { animation: fadeUp .2s ease both; }
+.pane.on .card:nth-child(2) { animation-delay: .04s; }
+.pane.on .card:nth-child(3) { animation-delay: .08s; }
+.pane.on .card:nth-child(4) { animation-delay: .12s; }
+.pane.on .card:nth-child(5) { animation-delay: .16s; }
+.pane.on .orient-card { animation: fadeUp .18s ease both; }
 </style>
 </head>
 <body>
 
-<header class="site-header">
+<header class="header">
   <div class="header-inner">
-    <div class="header-brand">
-      <div class="header-escudo">OAB</div>
-      <div class="header-titles">
-        <h1>Estratégia de Vendas — Cursos ESA</h1>
-        <p>247ª Subseção OAB • Santana de Parnaíba — SP</p>
+
+    <div class="logo-block">
+      <!-- Escudo OAB -->
+      <!-- OAB/SP Shield — heraldic structure: gold border, navy field, scales of justice, olive branches -->
+      <svg class="logo-shield" viewBox="0 0 54 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Outer gold shield -->
+        <path d="M27 1.5 L4 11 L4 32 C4 48 14.5 59.5 27 62.5 C39.5 59.5 50 48 50 32 L50 11 Z" fill="#C9920E"/>
+        <!-- Inner navy field -->
+        <path d="M27 4.5 L6.5 13 L6.5 32 C6.5 46.5 16 57.5 27 60 C38 57.5 47.5 46.5 47.5 32 L47.5 13 Z" fill="#0B1F4B"/>
+
+        <!-- Olive branch LEFT — stem + 5 leaves -->
+        <g stroke="#C9920E" stroke-width="0.7" fill="#C9920E">
+          <line x1="13" y1="42" x2="13" y2="24" stroke-width="0.6" opacity=".8"/>
+          <ellipse cx="10.5" cy="40" rx="2.2" ry="1.1" transform="rotate(-30 10.5 40)" opacity=".9"/>
+          <ellipse cx="9.5" cy="36" rx="2.2" ry="1.1" transform="rotate(-20 9.5 36)" opacity=".9"/>
+          <ellipse cx="9.8" cy="32" rx="2.2" ry="1.1" transform="rotate(-15 9.8 32)" opacity=".9"/>
+          <ellipse cx="10.5" cy="28" rx="2.2" ry="1.1" transform="rotate(-10 10.5 28)" opacity=".85"/>
+          <ellipse cx="11.5" cy="25" rx="2.2" ry="1.1" transform="rotate(-5 11.5 25)" opacity=".8"/>
+        </g>
+        <!-- Olive branch RIGHT — mirrored -->
+        <g stroke="#C9920E" stroke-width="0.7" fill="#C9920E">
+          <line x1="41" y1="42" x2="41" y2="24" stroke-width="0.6" opacity=".8"/>
+          <ellipse cx="43.5" cy="40" rx="2.2" ry="1.1" transform="rotate(30 43.5 40)" opacity=".9"/>
+          <ellipse cx="44.5" cy="36" rx="2.2" ry="1.1" transform="rotate(20 44.5 36)" opacity=".9"/>
+          <ellipse cx="44.2" cy="32" rx="2.2" ry="1.1" transform="rotate(15 44.2 32)" opacity=".9"/>
+          <ellipse cx="43.5" cy="28" rx="2.2" ry="1.1" transform="rotate(10 43.5 28)" opacity=".85"/>
+          <ellipse cx="42.5" cy="25" rx="2.2" ry="1.1" transform="rotate(5 42.5 25)" opacity=".8"/>
+        </g>
+
+        <!-- Scales of justice (balança) -->
+        <!-- Vertical post -->
+        <line x1="27" y1="16" x2="27" y2="46" stroke="#D4A820" stroke-width="1.1"/>
+        <!-- Horizontal beam -->
+        <line x1="16" y1="22" x2="38" y2="22" stroke="#D4A820" stroke-width="1.1"/>
+        <!-- Pivot circle -->
+        <circle cx="27" cy="22" r="1.4" fill="#D4A820"/>
+        <!-- Left chain -->
+        <line x1="18" y1="22" x2="18" y2="28" stroke="#D4A820" stroke-width="0.8"/>
+        <!-- Right chain -->
+        <line x1="36" y1="22" x2="36" y2="28" stroke="#D4A820" stroke-width="0.8"/>
+        <!-- Left pan -->
+        <path d="M14 28 Q18 30 22 28" stroke="#D4A820" stroke-width="0.9" fill="none"/>
+        <!-- Right pan -->
+        <path d="M32 28 Q36 30 40 28" stroke="#D4A820" stroke-width="0.9" fill="none"/>
+        <!-- Base -->
+        <line x1="24" y1="46" x2="30" y2="46" stroke="#D4A820" stroke-width="1.2"/>
+
+        <!-- Thin gold divider line top -->
+        <line x1="14" y1="15" x2="40" y2="15" stroke="#C9920E" stroke-width="0.5" opacity=".6"/>
+        <!-- Thin gold divider line bottom -->
+        <line x1="14" y1="49" x2="40" y2="49" stroke="#C9920E" stroke-width="0.5" opacity=".6"/>
+
+        <!-- OAB text bottom -->
+        <text x="27" y="57" font-family="Georgia,serif" font-size="6" font-weight="bold" fill="#D4A820" text-anchor="middle" letter-spacing="1.5">OAB</text>
+      </svg>
+
+      <div class="logo-text">
+        <div class="logo-oab">OAB/SP</div>
+        <div class="logo-sub">Secretaria</div>
       </div>
     </div>
-    <div class="header-badge">ESA/OAB</div>
+
+    <div class="header-mid">
+      <div class="header-mid-title">Subseção Santana de Parnaíba</div>
+      <div class="header-mid-sub">Central de atendimento · Mensagens prontas · Links diretos</div>
+    </div>
+
+    <div class="header-right">
+      <b>(11) 3291-3777</b><br>
+      oabsp.org.br
+    </div>
+
+  </div>
+
+  <div class="tabs-wrap">
+    <nav class="tabs">
+      <div class="tab on" data-p="certif"><span class="ti">🔐</span> Certificação Digital</div>
+      <div class="tab" data-p="cadastro"><span class="ti">👤</span> Cadastro</div>
+      <div class="tab" data-p="financeiro"><span class="ti">💳</span> Financeiro</div>
+      <div class="tab" data-p="certidoes"><span class="ti">📄</span> Certidões</div>
+      <div class="tab" data-p="intimacoes"><span class="ti">🔔</span> Intimações</div>
+      <div class="tab" data-p="assistencia"><span class="ti">⚖️</span> Assist. Judiciária</div>
+      <div class="tab" data-p="etica"><span class="ti">🏛️</span> Tribunal de Ética</div>
+      <div class="tab" data-p="processo"><span class="ti">🖥️</span> Proc. Eletrônico</div>
+      <div class="tab" data-p="outros"><span class="ti">🔧</span> Outros</div>
+    </nav>
   </div>
 </header>
 
-<nav class="nav-tabs">
-  <div class="nav-inner">
-    <button class="nav-tab active" onclick="showTab('estrategia',this)">Estratégia</button>
-    <button class="nav-tab" onclick="showTab('funil',this)">Funil de Vendas</button>
-    <button class="nav-tab" onclick="showTab('textos',this)">Textos Prontos</button>
-    <button class="nav-tab" onclick="showTab('objecoes',this)">Objeções</button>
-    <button class="nav-tab" onclick="showTab('canais',this)">Canais</button>
-    <button class="nav-tab" onclick="showTab('metas',this)">Metas</button>
-  </div>
-</nav>
-
 <main class="main">
 
-  <!-- ===== ESTRATÉGIA ===== -->
-  <section id="estrategia" class="section active">
-    <div class="hero-card">
-      <h2>Venda Cursos ESA para Advogados Filiados</h2>
-      <p>A ESA é o braço de educação oficial da OAB. O advogado já paga anuidade — os cursos são o retorno concreto desse investimento. Nossa missão é fazer esse valor chegar a cada filiado da 247ª Subseção.</p>
-      <div class="hero-tags">
-        <span class="hero-tag">Certificado com Chancela OAB</span>
-        <span class="hero-tag">Filiados como público direto</span>
-        <span class="hero-tag">Venda ativa pela Subseção</span>
-        <span class="hero-tag">Baixo atrito de conversão</span>
+<!-- ═══ CERTIFICAÇÃO DIGITAL ═══ -->
+<div class="pane on" id="p-certif">
+
+  <div class="sec-head">
+    <div class="sec-icon" style="background:#EEF3FC;">🔐</div>
+    <div>
+      <h2>Certificação Digital</h2>
+      <p>A OAB/SP opera com duas certificadoras parceiras: <strong>Certdata/Valid</strong> e <strong>Certisign</strong>. A emissão é feita diretamente nos sites das certificadoras ou nos postos físicos.</p>
+    </div>
+  </div>
+
+  <!-- ORIENTAÇÃO GERAL ACESSO AO SITE -->
+  <div class="orient-card">
+    <div class="orient-icon">🌐</div>
+    <div class="orient-body">
+      <div class="orient-title">Como acessar os serviços pelo site da OAB/SP</div>
+      <div class="orient-text">
+        A maioria dos serviços da OAB/SP está disponível em <strong>oabsp.org.br</strong>. Para serviços que exigem autenticação — como certidões, financeiro, atualização cadastral e assistência judiciária — o advogado deve clicar no <strong>🔒 cadeado</strong> localizado no <strong>canto superior direito</strong> da página inicial e fazer login com o número de inscrição OAB/SP e senha. Caso o advogado não saiba ou não lembre a senha, o próprio site oferece a opção de recuperação de acesso. Oriente-o a acessar o site antes de comparecer presencialmente, pois a maioria das demandas pode ser resolvida online.
+      </div>
+      <div class="orient-links">
+        <a class="lk lg" href="https://www.oabsp.org.br/servicos" target="_blank">↗ oabsp.org.br/servicos</a>
+        <a class="lk lb" href="https://www.oabsp.org.br" target="_blank">↗ Site principal</a>
       </div>
     </div>
+  </div>
 
-    <div class="metrics-row">
-      <div class="metric-card">
-        <div class="metric-num">3</div>
-        <div class="metric-label">pilares da proposta de valor</div>
-      </div>
-      <div class="metric-card">
-        <div class="metric-num">5</div>
-        <div class="metric-label">etapas do funil de conversão</div>
-      </div>
-      <div class="metric-card">
-        <div class="metric-num">4</div>
-        <div class="metric-label">canais de abordagem ativa</div>
-      </div>
-      <div class="metric-card">
-        <div class="metric-num">5</div>
-        <div class="metric-label">textos prontos para copiar</div>
-      </div>
-    </div>
+  <div class="grid">
 
-    <div class="grid2">
-      <div class="card">
-        <div class="card-header">
-          <div class="card-icon">🎯</div>
-          <div class="card-title">Proposta de Valor Central</div>
+    <!-- Certdata Videoconferência -->
+    <div class="card">
+      <div class="card-head">
+        <div class="ch-icon" style="background:#EEF3FC;">📹</div>
+        <div>
+          <div class="ch-title">Certdata — Videoconferência</div>
+          <div class="ch-sub">100% online · sem sair de casa</div>
         </div>
-        <p style="font-size:14px;color:var(--texto-sec);line-height:1.7;">O advogado filiado à OAB <strong>já paga anuidade</strong>. Os cursos da ESA são o retorno concreto desse investimento: capacitação com credencial oficial da Ordem, reconhecida por bancas, clientes e magistrados em todo o território nacional.</p>
       </div>
-      <div class="card">
-        <div class="card-header">
-          <div class="card-icon">💡</div>
-          <div class="card-title">Posicionamento Recomendado</div>
-        </div>
-        <p style="font-size:14px;color:var(--texto-sec);line-height:1.7;">Não venda <em>"curso"</em>. Venda <strong style="color:var(--azul)">atualização necessária com o menor custo e maior credencial disponível</strong>. O mercado jurídico muda rápido. Quem não se atualiza perde clientes para quem se atualizou.</p>
-      </div>
-    </div>
-
-    <div class="grid2">
-      <div class="card">
-        <div class="card-header">
-          <div class="card-icon">👥</div>
-          <div class="card-title">Público-Alvo Prioritário</div>
-        </div>
-        <ul class="lista">
-          <li>Advogados recém-inscritos (0–3 anos de OAB)</li>
-          <li>Advogados sem especialização formal registrada</li>
-          <li>Advogados que frequentam eventos da Subseção</li>
-          <li>Advogados que atuam na área de interesse da ESA</li>
-          <li>Advogados que passaram por atendimento recente</li>
+      <div class="card-body">
+        <ul class="steps">
+          <li class="step"><div class="snum">1</div><div class="stxt">Acesse <em>oabsp.certdata.com.br</em> e compre o certificado <em>sem token</em></div></li>
+          <li class="step"><div class="snum">2</div><div class="stxt">Após confirmação do pagamento, envie documentos para <em>validar@certdata.com.br</em></div></li>
+          <li class="step"><div class="snum">3</div><div class="stxt">A Certdata confirma data e horário da videoconferência</div></li>
+          <li class="step"><div class="snum">4</div><div class="stxt">Acesse o link com câmera e microfone ativos — agente valida por biometria</div></li>
+          <li class="step"><div class="snum">5</div><div class="stxt">Receba o link de instalação por e-mail em até <em>2 dias úteis</em></div></li>
         </ul>
-      </div>
-      <div class="card">
-        <div class="card-header">
-          <div class="card-icon">⭐</div>
-          <div class="card-title">Diferenciais ESA a Destacar</div>
+        <div class="notice nb">ℹ️ Requisito: CNH válida ou biometria ICP-Brasil cadastrada. Windows 8+.</div>
+        <div class="chips">
+          <span class="chip cg">Online</span>
+          <span class="chip cb">Videoconferência</span>
+          <span class="chip cp">CNH ou biometria ICP</span>
         </div>
-        <ul class="lista">
-          <li>Certificado com selo OAB — peso real no mercado</li>
-          <li>Corpo docente: advogados e magistrados ativos</li>
-          <li>Modalidade online e presencial — flexibilidade total</li>
-          <li>Preço subsidiado exclusivo para filiados OAB</li>
-          <li>Reconhecimento nacional em bancas e escritórios</li>
+        <div class="links">
+          <a class="lk lb" href="https://agenda.certdata.com.br/agendar.aspx" target="_blank">↗ Agendar videoconferência</a>
+        </div>
+        <div class="msgbox">
+          <div class="msgbox-top">
+            <span class="msgbox-label"><span>Mensagem</span> · Certdata Videoconferência</span>
+            <button class="copy-btn" onclick="cp(this)">Copiar</button>
+          </div>
+          <div class="msgbox-body">Prezado(a) Dr(a). [NOME],
+
+O certificado pode ser emitido por videoconferência, sem sair de casa.
+
+Requisito: CNH válida ou biometria cadastrada na ICP-Brasil.
+
+1. Acesse oabsp.certdata.com.br e compre o certificado sem token
+2. Após o pagamento, envie seus documentos para validar@certdata.com.br
+3. A Certdata agendará a data e horário da videoconferência
+4. No horário combinado, acesse o link com câmera e microfone ativos
+5. Em até 2 dias úteis você recebe o link de instalação
+
+Suporte Certdata: 0800-580-8090
+Subseção OAB/SP — Santana de Parnaíba</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Certdata Renovação Online -->
+    <div class="card">
+      <div class="card-head">
+        <div class="ch-icon" style="background:#F5F0FD;">♻️</div>
+        <div>
+          <div class="ch-title">Certdata — Renovação Online</div>
+          <div class="ch-sub">Certificado ainda válido · sem agente</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <ul class="steps">
+          <li class="step"><div class="snum">1</div><div class="stxt">Acesse <em>oabsp.certdata.com.br</em> dentro dos <em>30 dias antes do vencimento</em></div></li>
+          <li class="step"><div class="snum">2</div><div class="stxt">Insira seu CPF e selecione a opção "Renovação Online"</div></li>
+          <li class="step"><div class="snum">3</div><div class="stxt">Conclua o pagamento e siga as instruções — processo autônomo, sem agente</div></li>
         </ul>
+        <div class="notice ng">✓ Aceita certificados de qualquer certificadora, desde que ainda válidos.</div>
+        <div class="chips">
+          <span class="chip cg">Online</span>
+          <span class="chip cg">Renovação imediata</span>
+        </div>
+        <div class="links">
+          <a class="lk lb" href="https://oabsp.certdata.com.br" target="_blank">↗ Renovar agora</a>
+        </div>
+        <div class="msgbox">
+          <div class="msgbox-top">
+            <span class="msgbox-label"><span>Mensagem</span> · Renovação Online</span>
+            <button class="copy-btn" onclick="cp(this)">Copiar</button>
+          </div>
+          <div class="msgbox-body">Prezado(a) Dr(a). [NOME],
+
+Seu certificado pode ser renovado 100% online, se ainda estiver dentro do prazo de validade.
+
+1. Acesse oabsp.certdata.com.br e insira seu CPF
+2. Selecione "Renovação Online"
+3. Efetue o pagamento — processo autônomo, sem necessidade de agente
+
+Aceita certificados de qualquer certificadora.
+Realize dentro dos 30 dias antes do vencimento.
+
+Subseção OAB/SP — Santana de Parnaíba</div>
+        </div>
       </div>
     </div>
-  </section>
 
-  <!-- ===== FUNIL ===== -->
-  <section id="funil" class="section">
-    <div class="hero-card">
-      <h2>Funil de Conversão em 5 Etapas</h2>
-      <p>Da consciência do problema até a fidelização e indicação. Cada etapa tem mensagem, canal e ação específica.</p>
-    </div>
+    <!-- Certdata Nuvem Gratuito -->
     <div class="card">
-      <div class="etapas">
-        <div class="etapa">
-          <div class="etapa-linha">
-            <div class="etapa-num">1</div>
-            <div class="etapa-conector"></div>
-          </div>
-          <div class="etapa-body">
-            <span class="etapa-tag">Atenção</span>
-            <h4>Gerar consciência do problema</h4>
-            <p>Lembrar o advogado de que o mercado jurídico muda, que clientes pesquisam o currículo antes de contratar, e que um currículo parado trabalha contra ele. Canais: WhatsApp individual, e-mail, mural da Subseção.</p>
-          </div>
+      <div class="card-head">
+        <div class="ch-icon" style="background:#EDF7F2;">☁️</div>
+        <div>
+          <div class="ch-title">Certificado em Nuvem — Gratuito OAB/SP</div>
+          <div class="ch-sub">Presente da OAB/SP · 1 ano · todos os inscritos</div>
         </div>
-        <div class="etapa">
-          <div class="etapa-linha">
-            <div class="etapa-num">2</div>
-            <div class="etapa-conector"></div>
-          </div>
-          <div class="etapa-body">
-            <span class="etapa-tag">Interesse</span>
-            <h4>Apresentar a solução ESA</h4>
-            <p>Mostrar catálogo de cursos com destaque para a área de atuação do advogado. Usar linguagem de benefício ("você sairá apto a..."), não de conteúdo ("serão abordados..."). Personalizar sempre que possível.</p>
-          </div>
+      </div>
+      <div class="card-body">
+        <ul class="steps">
+          <li class="step"><div class="snum">1</div><div class="stxt">Acesse <em>presenteoabsp.certdata.com.br</em> e insira seu CPF</div></li>
+          <li class="step"><div class="snum">2</div><div class="stxt">Confirme sua inscrição OAB/SP e selecione o certificado em nuvem gratuito</div></li>
+          <li class="step"><div class="snum">3</div><div class="stxt">Realize a validação (vídeo ou presencial) conforme ICP-Brasil</div></li>
+          <li class="step"><div class="snum">4</div><div class="stxt">Instale o app no celular — use para assinar documentos e peticionar</div></li>
+        </ul>
+        <div class="notice ng">✓ Novos inscritos a partir de 01/01/2024 têm token gratuito.</div>
+        <div class="chips">
+          <span class="chip cg">Em nuvem</span>
+          <span class="chip cg">Gratuito 1 ano</span>
+          <span class="chip cb">Via celular</span>
         </div>
-        <div class="etapa">
-          <div class="etapa-linha">
-            <div class="etapa-num">3</div>
-            <div class="etapa-conector"></div>
-          </div>
-          <div class="etapa-body">
-            <span class="etapa-tag">Desejo</span>
-            <h4>Criar urgência e pertencimento</h4>
-            <p>Vagas limitadas, turma com colegas da mesma região, certificado que o mercado respeita. Mostrar que outros da Subseção já estão inscritos. Aproximar: "sua colega X da 247ª já garantiu vaga."</p>
-          </div>
+        <div class="links">
+          <a class="lk lg" href="https://presenteoabsp.certdata.com.br" target="_blank">↗ Certificado Gratuito</a>
         </div>
-        <div class="etapa">
-          <div class="etapa-linha">
-            <div class="etapa-num">4</div>
-            <div class="etapa-conector"></div>
+        <div class="msgbox">
+          <div class="msgbox-top">
+            <span class="msgbox-label"><span>Mensagem</span> · Certificado Gratuito</span>
+            <button class="copy-btn" onclick="cp(this)">Copiar</button>
           </div>
-          <div class="etapa-body">
-            <span class="etapa-tag">Ação</span>
-            <h4>Facilitar a inscrição</h4>
-            <p>Link direto, sem burocracia. Oferecer ajuda presencial ou por WhatsApp para completar o cadastro. Remover qualquer atrito no processo. A Subseção pode fazer a inscrição assistida na hora.</p>
-          </div>
-        </div>
-        <div class="etapa">
-          <div class="etapa-linha">
-            <div class="etapa-num">5</div>
-            <div class="etapa-conector"></div>
-          </div>
-          <div class="etapa-body">
-            <span class="etapa-tag">Fidelização</span>
-            <h4>Transformar em embaixador</h4>
-            <p>Após o curso, pedir indicação. Oferecer desconto em próximo curso. Convidar para eventos da Subseção como egresso ESA. Criar comunidade de egressos — quem fez indica quem ainda não fez.</p>
-          </div>
+          <div class="msgbox-body">Prezado(a) Dr(a). [NOME],
+
+A OAB/SP oferece certificado digital em nuvem gratuito por 1 ano para todos os inscritos.
+
+1. Acesse presenteoabsp.certdata.com.br e insira seu CPF
+2. Confirme sua inscrição e selecione o certificado em nuvem gratuito
+3. Realize a validação (videoconferência ou presencial)
+4. Instale o app no celular para assinar e peticionar
+
+Funciona pelo celular, sem necessidade de token físico.
+
+Subseção OAB/SP — Santana de Parnaíba</div>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- ===== TEXTOS ===== -->
-  <section id="textos" class="section">
-    <div class="hero-card">
-      <h2>Textos Prontos — Copy de Vendas</h2>
-      <p>8 mensagens com gatilhos reais de persuasão. Substitua os campos em colchetes antes de enviar. Cada mensagem tem um objetivo específico na jornada de compra.</p>
-    </div>
-
+    <!-- Certisign Presencial -->
     <div class="card">
-      <div class="card-header">
-        <div class="card-icon">💬</div>
-        <div class="card-title">WhatsApp 1 — Primeira abordagem (abertura com dor)</div>
-      </div>
-      <div class="msg-wrapper">
-        <div class="msg-label-row">
-          <span class="msg-label">Gatilho: dor + curiosidade</span>
-          <button class="copy-btn" onclick="copiarMsg(this)">Copiar</button>
+      <div class="card-head">
+        <div class="ch-icon" style="background:#FEF8EE;">🏢</div>
+        <div>
+          <div class="ch-title">Certisign — Emissão Presencial</div>
+          <div class="ch-sub">Postos próprios Certisign · disponível a todos</div>
         </div>
-        <div class="msg-box">Dr(a). [Nome], boa tarde!
+      </div>
+      <div class="card-body">
+        <ul class="steps">
+          <li class="step"><div class="snum">1</div><div class="stxt">Acesse <em>certisign.com.br</em>, escolha o produto e efetue o pagamento</div></li>
+          <li class="step"><div class="snum">2</div><div class="stxt">Guarde o <em>número do pedido</em> (começa com CERTI ou 17)</div></li>
+          <li class="step"><div class="snum">3</div><div class="stxt">Em "Meus Pedidos" → "Agendamento", informe o número e CPF</div></li>
+          <li class="step"><div class="snum">4</div><div class="stxt">Selecione posto presencial, data e horário</div></li>
+          <li class="step"><div class="snum">5</div><div class="stxt">Compareça com <em>RG ou CNH original</em>, CPF e carteira OAB</div></li>
+        </ul>
+        <div class="notice nb">ℹ️ Suporte Certisign: (11) 4020-9735 — das 9h às 18h em dias úteis.</div>
+        <div class="chips">
+          <span class="chip ca">Presencial</span>
+          <span class="chip cb">Agendamento obrigatório</span>
+        </div>
+        <div class="links">
+          <a class="lk lg" href="https://certisign.com.br" target="_blank">↗ Site Certisign</a>
+          <a class="lk lb" href="https://suporte.certisign.com.br/duvidas-suporte/agendamento" target="_blank">↗ Agendar</a>
+        </div>
+        <div class="msgbox">
+          <div class="msgbox-top">
+            <span class="msgbox-label"><span>Mensagem</span> · Certisign Presencial</span>
+            <button class="copy-btn" onclick="cp(this)">Copiar</button>
+          </div>
+          <div class="msgbox-body">Prezado(a) Dr(a). [NOME],
 
-Sou [seu nome] da 247ª Subseção OAB — Santana de Parnaíba.
+Para emitir seu certificado digital pela Certisign:
 
-Tenho uma informação sobre capacitação que pode fazer diferença real na sua carteira de clientes ainda este ano.
+1. Acesse certisign.com.br, escolha o produto e efetue o pagamento
+2. Guarde o número do pedido do e-mail de confirmação (começa com CERTI ou 17)
+3. Em "Meus Pedidos" → "Agendamento", informe o número e seu CPF
+4. Escolha um posto presencial e selecione data e horário
+5. Compareça com RG/CNH original, CPF e carteira OAB
 
-Posso te passar em 2 minutos?</div>
+Suporte: (11) 4020-9735 — das 9h às 18h (dias úteis)
+Subseção OAB/SP — Santana de Parnaíba</div>
+        </div>
       </div>
     </div>
 
+    <!-- Certisign Videoconferência -->
     <div class="card">
-      <div class="card-header">
-        <div class="card-icon">📋</div>
-        <div class="card-title">WhatsApp 2 — Apresentação com benefício concreto</div>
-      </div>
-      <div class="msg-wrapper">
-        <div class="msg-label-row">
-          <span class="msg-label">Gatilho: prova social + autoridade + escassez</span>
-          <button class="copy-btn" onclick="copiarMsg(this)">Copiar</button>
+      <div class="card-head">
+        <div class="ch-icon" style="background:#EEF3FC;">🎥</div>
+        <div>
+          <div class="ch-title">Certisign — Videoconferência</div>
+          <div class="ch-sub">Teams, Zoom ou Webex · 15–30 minutos</div>
         </div>
-        <div class="msg-box">A ESA — Escola Superior de Advocacia da OAB — abriu inscrições para o curso de [nome do curso].
+      </div>
+      <div class="card-body">
+        <ul class="steps">
+          <li class="step"><div class="snum">1</div><div class="stxt">Adquira o certificado em <em>certisign.com.br</em> e anote o número do pedido</div></li>
+          <li class="step"><div class="snum">2</div><div class="stxt">No agendamento, selecione <em>"Videoconferência"</em></div></li>
+          <li class="step"><div class="snum">3</div><div class="stxt">Envie documentos em PDF pelo e-mail indicado após o agendamento</div></li>
+          <li class="step"><div class="snum">4</div><div class="stxt">Acesse o link no horário — câmera e microfone ativos, documento em mãos</div></li>
+          <li class="step"><div class="snum">5</div><div class="stxt">Receba o link de instalação em até <em>2 dias úteis</em></div></li>
+        </ul>
+        <div class="notice na">⚠️ Disponível apenas para quem tem CNH ou biometria ICP-Brasil cadastrada.</div>
+        <div class="chips">
+          <span class="chip cg">Online</span>
+          <span class="chip cb">Videoconferência</span>
+          <span class="chip cp">CNH ou biometria ICP</span>
+        </div>
+        <div class="links">
+          <a class="lk lb" href="https://certisign.com.br/suporte/agendamento/videoconferencia" target="_blank">↗ Agendar videoconferência</a>
+        </div>
+        <div class="msgbox">
+          <div class="msgbox-top">
+            <span class="msgbox-label"><span>Mensagem</span> · Certisign Videoconferência</span>
+            <button class="copy-btn" onclick="cp(this)">Copiar</button>
+          </div>
+          <div class="msgbox-body">Prezado(a) Dr(a). [NOME],
 
-Por que isso importa pra você agora?
+O certificado pela Certisign pode ser emitido por videoconferência.
 
-Porque cliente que pesquisa advogado no Google lê o currículo antes de ligar. Especialização com certificado OAB é o que separa quem é chamado de quem é ignorado.
+Requisito: CNH válida ou biometria cadastrada na ICP-Brasil.
 
-✅ Certificado oficial da OAB — peso que plataforma nenhuma tem
-✅ Conteúdo aplicado: quem ensina ainda atua na área
-✅ [Online / Presencial] — você encaixa na sua rotina
-✅ Valor subsidiado exclusivo para filiados da 247ª
+1. Adquira o certificado em certisign.com.br e anote o número do pedido
+2. No agendamento, selecione "Videoconferência"
+3. Envie os documentos em PDF pelo e-mail indicado
+4. No horário marcado, acesse o link (Teams, Zoom ou Webex) com câmera e microfone ativos
+5. Em até 2 dias úteis recebe o link de instalação
 
-Vagas limitadas. A última turma fechou antes do prazo.
-
-Garanto sua vaga agora?</div>
+Suporte: (11) 4020-9735 — das 9h às 18h (dias úteis)
+Subseção OAB/SP — Santana de Parnaíba</div>
+        </div>
       </div>
     </div>
 
-    <div class="card">
-      <div class="card-header">
-        <div class="card-icon">🔥</div>
-        <div class="card-title">WhatsApp 3 — Abordagem direta para quem já conhece a ESA</div>
-      </div>
-      <div class="msg-wrapper">
-        <div class="msg-label-row">
-          <span class="msg-label">Gatilho: urgência + perda</span>
-          <button class="copy-btn" onclick="copiarMsg(this)">Copiar</button>
-        </div>
-        <div class="msg-box">Dr(a). [Nome]!
+  </div>
+</div><!-- /certif -->
 
-Inscrições abertas para [nome do curso] — ESA/OAB.
 
-Já temos [X] colegas da Subseção inscritos. As vagas são poucas e o prazo fecha em [data].
-
-Quem deixa pra depois normalmente perde a turma. A próxima pode demorar meses.
-
-Posso te enviar o link agora e, se quiser, te ajudo a concluir a inscrição em menos de 5 minutos.
-
-Topas?</div>
-      </div>
+<!-- ═══ CADASTRO ═══ -->
+<div class="pane" id="p-cadastro">
+  <div class="sec-head">
+    <div class="sec-icon" style="background:#EEF3FC;">👤</div>
+    <div>
+      <h2>Cadastro &amp; Inscrição</h2>
+      <p>Acesso: <strong>oabsp.org.br → 🔒 cadeado (canto superior direito) → login → menu lateral "Serviços".</strong></p>
     </div>
-
-    <div class="card">
-      <div class="card-header">
-        <div class="card-icon">✉️</div>
-        <div class="card-title">E-mail — Divulgação oficial para lista de filiados</div>
-      </div>
-      <div class="msg-wrapper">
-        <div class="msg-label-row">
-          <span class="msg-label">Gatilho: autoridade + benefício exclusivo + prazo</span>
-          <button class="copy-btn" onclick="copiarMsgEmail(this)">Copiar</button>
-        </div>
-        <div class="assunto-line">Assunto: Sua OAB está investindo na sua carreira — aproveite antes de [data]</div>
-        <div class="msg-box">Dr(a). [Nome],
-
-Você paga anuidade à OAB. A OAB tem uma obrigação com você: devolver esse investimento em valor concreto.
-
-A ESA — Escola Superior de Advocacia — é uma dessas formas. E agora está com inscrições abertas para o curso de [nome do curso].
-
-O que você leva:
-→ Certificado emitido pela própria OAB — reconhecido em todo o Brasil
-→ Professores que ainda atuam: sem teoria distante da prática real
-→ [X] horas de formação em [modalidade] — você estuda quando puder
-→ Condição de filiado: valor que nenhuma plataforma privada consegue cobrar
-
-O mercado jurídico não espera. Enquanto você adia, um colega com o mesmo certificado está sendo chamado no seu lugar.
-
-Inscrições encerram em [data]. Vagas limitadas.
-
-Garanta a sua agora: [link]
-
-Precisa de ajuda para se inscrever? Responda este e-mail ou nos chame no WhatsApp [número]. Fazemos juntos.
-
-Atenciosamente,
-[Seu nome]
-247ª Subseção OAB — Santana de Parnaíba
-[número] | [e-mail]</div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-header">
-        <div class="card-icon">📱</div>
-        <div class="card-title">Grupo WhatsApp / Status — Post de lançamento</div>
-      </div>
-      <div class="msg-wrapper">
-        <div class="msg-label-row">
-          <span class="msg-label">Gatilho: escassez + identidade profissional</span>
-          <button class="copy-btn" onclick="copiarMsg(this)">Copiar</button>
-        </div>
-        <div class="msg-box">⚖️ ADVOGADO QUE SE ATUALIZA, FECHA MAIS CASOS.
-
-A ESA abriu inscrições para [nome do curso].
-
-📜 Certificado OAB — o que o cliente vê antes de ligar pra você
-👨‍⚖️ Docentes que atuam: direito de verdade, sem rodeio
-🕐 [Online / Presencial] — encaixa na sua rotina
-💰 Valor especial para filiados da 247ª Subseção
-
-📌 Vagas limitadas. Prazo: [data]
-👉 Inscrições: [link]
-📲 Dúvidas: [número]
-
-Sua carreira não pode esperar.</div>
-      </div>
-    </div>
+  </div>
+  <div class="grid">
 
     <div class="card">
-      <div class="card-header">
-        <div class="card-icon">🔁</div>
-        <div class="card-title">WhatsApp 4 — Follow-up para quem demonstrou interesse</div>
-      </div>
-      <div class="msg-wrapper">
-        <div class="msg-label-row">
-          <span class="msg-label">Gatilho: proximidade + facilidade + prazo real</span>
-          <button class="copy-btn" onclick="copiarMsg(this)">Copiar</button>
+      <div class="card-head"><div class="ch-icon" style="background:#EEF3FC;">📝</div><div><div class="ch-title">Pedido de Inscrição</div><div class="ch-sub">Novo advogado ou estagiário</div></div></div>
+      <div class="card-body">
+        <ul class="steps">
+          <li class="step"><div class="snum">1</div><div class="stxt">Acesse <em>oabsp.org.br</em> → "Inscreva-se" ou "Serviços" → "Pedido de Inscrição"</div></li>
+          <li class="step"><div class="snum">2</div><div class="stxt">Cadastre-se no sistema e preencha o formulário online</div></li>
+          <li class="step"><div class="snum">3</div><div class="stxt">Selecione a modalidade: Definitiva, Suplementar, Transferência ou Estagiário(a)</div></li>
+          <li class="step"><div class="snum">4</div><div class="stxt">Gere e pague o boleto da taxa de inscrição</div></li>
+          <li class="step"><div class="snum">5</div><div class="stxt">Acompanhe a liberação pelo sistema (prazo: até 30 dias úteis)</div></li>
+          <li class="step"><div class="snum">6</div><div class="stxt">Após aprovação, agende presencialmente para biometria e foto 3×4</div></li>
+        </ul>
+        <div class="notice na">⚠️ A veracidade dos documentos é responsabilidade do interessado (art. 299 CP).</div>
+        <div class="chips"><span class="chip ca">Presencial</span><span class="chip cg">Início online</span></div>
+        <div class="links">
+          <a class="lk lb" href="https://www.oabsp.org.br/inscricao" target="_blank">↗ Pedido de Inscrição OAB/SP</a>
         </div>
-        <div class="msg-box">Dr(a). [Nome], passando rapidinho.
+        <div class="msgbox">
+          <div class="msgbox-top"><span class="msgbox-label"><span>Mensagem</span> · Pedido de Inscrição</span><button class="copy-btn" onclick="cp(this)">Copiar</button></div>
+          <div class="msgbox-body">Prezado(a) Dr(a). [NOME],
 
-Você me perguntou sobre o curso de [área] semana passada — as inscrições fecham amanhã às [hora].
+Para realizar seu pedido de inscrição na OAB/SP:
 
-Se quiser garantir, me fala aqui agora. Eu mesma te ajudo a concluir o cadastro, leva menos de 5 minutos.
+1. Acesse oabsp.org.br → "Inscreva-se" ou "Serviços" → "Pedido de Inscrição"
+2. Cadastre-se no sistema e preencha o formulário online
+3. Selecione a modalidade (Definitiva, Suplementar, Transferência ou Estagiário)
+4. Gere e pague o boleto da taxa de inscrição
+5. Acompanhe a liberação do número pelo sistema
+6. Após aprovação, agende para biometria e entrega de foto 3×4
 
-Não quero que você perca essa turma por falta de tempo pra se inscrever.
-
-[link]</div>
+Subseção OAB/SP — Santana de Parnaíba</div>
+        </div>
       </div>
     </div>
 
     <div class="card">
-      <div class="card-header">
-        <div class="card-icon">⏰</div>
-        <div class="card-title">WhatsApp 5 — Último dia de inscrição (urgência máxima)</div>
-      </div>
-      <div class="msg-wrapper">
-        <div class="msg-label-row">
-          <span class="msg-label">Gatilho: última chance + consequência de não agir</span>
-          <button class="copy-btn" onclick="copiarMsg(this)">Copiar</button>
+      <div class="card-head"><div class="ch-icon" style="background:#EDF7F2;">✏️</div><div><div class="ch-title">Atualização Cadastral</div><div class="ch-sub">Endereço, telefone, e-mail</div></div></div>
+      <div class="card-body">
+        <ul class="steps">
+          <li class="step"><div class="snum">1</div><div class="stxt">Acesse <em>oabsp.org.br</em> → clique no 🔒 cadeado (canto superior direito)</div></li>
+          <li class="step"><div class="snum">2</div><div class="stxt">Faça login com seu número OAB/SP e senha</div></li>
+          <li class="step"><div class="snum">3</div><div class="stxt">No menu lateral, clique em <em>"Atualização Cadastral"</em></div></li>
+          <li class="step"><div class="snum">4</div><div class="stxt">Atualize telefone, e-mail e endereço — mantenha "Sim" nos comunicados institucionais</div></li>
+        </ul>
+        <div class="notice ng">✓ 100% online, sem agendamento. Leva apenas alguns minutos.</div>
+        <div class="chips"><span class="chip cg">Online</span><span class="chip cg">Gratuito</span><span class="chip cp">Área restrita</span></div>
+        <div class="links"><a class="lk lb" href="https://www.oabsp.org.br/servicos/atualizacao-cadastral" target="_blank">↗ Atualizar cadastro</a></div>
+        <div class="msgbox">
+          <div class="msgbox-top"><span class="msgbox-label"><span>Mensagem</span> · Atualização Cadastral</span><button class="copy-btn" onclick="cp(this)">Copiar</button></div>
+          <div class="msgbox-body">Prezado(a) Dr(a). [NOME],
+
+Para atualizar seus dados cadastrais na OAB/SP:
+
+1. Acesse oabsp.org.br e clique no 🔒 cadeado (canto superior direito)
+2. Faça login com seu número OAB/SP e senha
+3. No menu lateral, clique em "Atualização Cadastral"
+4. Atualize telefone, e-mail e endereço e salve
+
+Processo 100% online, sem agendamento.
+Subseção OAB/SP — Santana de Parnaíba</div>
         </div>
-        <div class="msg-box">Dr(a). [Nome] — hoje é o último dia.
-
-As inscrições para [nome do curso] fecham hoje às [hora]. Depois disso, a próxima turma não tem data prevista.
-
-Quem está inscrito já garantiu o certificado. Quem não está, vai esperar — e o mercado não espera junto.
-
-Se quiser entrar, me fala agora. Resolvo tudo aqui com você.
-
-[link]</div>
       </div>
     </div>
 
     <div class="card">
-      <div class="card-header">
-        <div class="card-icon">🏆</div>
-        <div class="card-title">WhatsApp 6 — Pós-inscrição (confirmação e fidelização)</div>
-      </div>
-      <div class="msg-wrapper">
-        <div class="msg-label-row">
-          <span class="msg-label">Gatilho: reforço da decisão + abertura para indicação</span>
-          <button class="copy-btn" onclick="copiarMsg(this)">Copiar</button>
+      <div class="card-head"><div class="ch-icon" style="background:#FEF8EE;">🔄</div><div><div class="ch-title">Transferência de Subseção</div><div class="ch-sub">Mudança de comarca ou cidade</div></div></div>
+      <div class="card-body">
+        <ul class="steps">
+          <li class="step"><div class="snum">1</div><div class="stxt">Verifique se a anuidade está quitada (obrigatório)</div></li>
+          <li class="step"><div class="snum">2</div><div class="stxt">Acesse <em>oabsp.org.br</em> → 🔒 → login → <em>"Transferência de Subseção"</em></div></li>
+          <li class="step"><div class="snum">3</div><div class="stxt">Preencha o formulário com a subseção de destino</div></li>
+          <li class="step"><div class="snum">4</div><div class="stxt">Envie comprovante de domicílio profissional na nova comarca</div></li>
+          <li class="step"><div class="snum">5</div><div class="stxt">Aguarde análise e confirmação por e-mail</div></li>
+        </ul>
+        <div class="notice nb">ℹ️ Transferência entre estados tem processo diferenciado — consulte o Conselho Federal.</div>
+        <div class="chips"><span class="chip cg">Online</span><span class="chip cp">Área restrita</span></div>
+        <div class="msgbox">
+          <div class="msgbox-top"><span class="msgbox-label"><span>Mensagem</span> · Transferência de Subseção</span><button class="copy-btn" onclick="cp(this)">Copiar</button></div>
+          <div class="msgbox-body">Prezado(a) Dr(a). [NOME],
+
+Para solicitar transferência de subseção na OAB/SP:
+
+1. Verifique que sua anuidade está quitada
+2. Acesse oabsp.org.br → 🔒 → faça login
+3. No menu, clique em "Transferência de Subseção"
+4. Preencha o formulário com a subseção de destino
+5. Envie comprovante de domicílio profissional na nova comarca
+6. Aguarde confirmação por e-mail
+
+Subseção OAB/SP — Santana de Parnaíba</div>
         </div>
-        <div class="msg-box">Dr(a). [Nome], inscrição confirmada! 🎉
-
-Você tomou uma decisão que vai aparecer no seu currículo, nos seus contratos e na sua reputação.
-
-Qualquer dúvida sobre o curso, pode me chamar aqui.
-
-E se tiver algum colega que poderia se beneficiar também — pode indicar. Quanto mais advogados qualificados na nossa Subseção, mais forte fica a advocacia da nossa região.
-
-Bons estudos!
-[Seu nome] — 247ª Subseção OAB</div>
       </div>
     </div>
-  </section>
 
-  <!-- ===== OBJEÇÕES ===== -->
-  <section id="objecoes" class="section">
-    <div class="hero-card">
-      <h2>Respostas para as Principais Objeções</h2>
-      <p>Respostas rápidas, diretas e com base no valor real da ESA. Não desvie do argumento central: credencial OAB é insubstituível.</p>
-    </div>
     <div class="card">
-      <div class="objecao">
-        <div class="objecao-q">Não tenho tempo para curso agora.</div>
-        <div class="objecao-r">Entendo perfeitamente. Por isso a ESA oferece modalidade online com gravações disponíveis — você assiste no horário que tiver, sem comprometer a agenda. A maioria dos colegas assiste nos intervalos ou à noite.</div>
-      </div>
-      <div class="objecao">
-        <div class="objecao-q">Já fiz vários cursos e não mudou nada na minha carreira.</div>
-        <div class="objecao-r">A diferença aqui é o certificado com chancela da OAB. Não é um curso qualquer — é a própria Ordem atestando sua qualificação. Isso tem peso real na conquista de clientes, em processos seletivos de escritórios e em bancas.</div>
-      </div>
-      <div class="objecao">
-        <div class="objecao-q">Está caro, não tenho esse dinheiro agora.</div>
-        <div class="objecao-r">O valor para filiados da OAB já é subsidiado — é o menor preço disponível para esse certificado. Se pensar em retorno: um cliente a mais cobre o investimento com folga. E o certificado fica no currículo para sempre.</div>
-      </div>
-      <div class="objecao">
-        <div class="objecao-q">Posso fazer depois, quando tiver mais tempo.</div>
-        <div class="objecao-r">As vagas são limitadas e as turmas fecham quando completam. A próxima pode ter data incerta. Garantir agora é garantir o melhor momento para começar — e não perder a oportunidade desta turma.</div>
-      </div>
-      <div class="objecao">
-        <div class="objecao-q">Não sei se esse curso é bom ou reconhecido.</div>
-        <div class="objecao-r">É desenvolvido e certificado pela Escola Superior de Advocacia, o braço oficial de educação da OAB. O corpo docente é composto por advogados e magistrados em atividade. Não existe formação mais alinhada com a prática real da advocacia no Brasil.</div>
-      </div>
-      <div class="objecao">
-        <div class="objecao-q">Faço cursos online em outras plataformas, é a mesma coisa.</div>
-        <div class="objecao-r">As outras plataformas emitem um certificado próprio. A ESA emite certificado com o selo da Ordem dos Advogados do Brasil — a entidade que regulamenta sua profissão. São pesos completamente diferentes para um cliente ou para uma banca.</div>
+      <div class="card-head"><div class="ch-icon" style="background:#F5F0FD;">🆔</div><div><div class="ch-title">2ª Via — Carteira OAB</div><div class="ch-sub">Extraviada, danificada ou roubada</div></div></div>
+      <div class="card-body">
+        <ul class="steps">
+          <li class="step"><div class="snum">1</div><div class="stxt">Acesse <em>oabsp.org.br</em> → 🔒 → login → <em>"Solicitação de 2ª Via de Documento de Identidade Profissional"</em></div></li>
+          <li class="step"><div class="snum">2</div><div class="stxt">Informe o motivo: extravio, dano ou roubo</div></li>
+          <li class="step"><div class="snum">3</div><div class="stxt">Pague a taxa gerada no sistema</div></li>
+          <li class="step"><div class="snum">4</div><div class="stxt">Agende retirada presencial ou solicite envio pelos Correios</div></li>
+        </ul>
+        <div class="chips"><span class="chip cg">Online</span><span class="chip cr">Taxa</span><span class="chip cp">Área restrita</span></div>
+        <div class="links"><a class="lk lb" href="https://www.oabsp.org.br/servicos/agendamento-online" target="_blank">↗ Agendamento Online</a></div>
+        <div class="msgbox">
+          <div class="msgbox-top"><span class="msgbox-label"><span>Mensagem</span> · 2ª Via Carteira OAB</span><button class="copy-btn" onclick="cp(this)">Copiar</button></div>
+          <div class="msgbox-body">Prezado(a) Dr(a). [NOME],
+
+Para solicitar 2ª via da carteira OAB/SP:
+
+1. Acesse oabsp.org.br → 🔒 → faça login
+2. Clique em "Solicitação de 2ª Via de Documento de Identidade Profissional"
+3. Informe o motivo (extravio, dano ou roubo)
+4. Pague a taxa gerada no sistema
+5. Agende retirada ou solicite envio pelos Correios
+
+Subseção OAB/SP — Santana de Parnaíba</div>
+        </div>
       </div>
     </div>
-  </section>
 
-  <!-- ===== CANAIS ===== -->
-  <section id="canais" class="section">
-    <div class="hero-card">
-      <h2>Canais de Abordagem e Calendário</h2>
-      <p>Use todos os canais em sequência coordenada. O impacto máximo vem da combinação, não de um canal isolado.</p>
+  </div>
+</div><!-- /cadastro -->
+
+
+<!-- ═══ FINANCEIRO ═══ -->
+<div class="pane" id="p-financeiro">
+  <div class="sec-head"><div class="sec-icon" style="background:#FEF8EE;">💳</div><div><h2>Financeiro</h2><p>Acesso: <strong>oabsp.org.br → 🔒 → login → "Financeiro"</strong>. Central: (11) 3291-3777.</p></div></div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-head"><div class="ch-icon" style="background:#FEF8EE;">🏦</div><div><div class="ch-title">Anuidade e Boletos</div><div class="ch-sub">2ª via, parcelamento, quitação</div></div></div>
+      <div class="card-body">
+        <ul class="steps">
+          <li class="step"><div class="snum">1</div><div class="stxt">Acesse <em>oabsp.org.br</em> → 🔒 → login → menu <em>"Financeiro"</em></div></li>
+          <li class="step"><div class="snum">2</div><div class="stxt">Visualize débitos em aberto e histórico de pagamentos</div></li>
+          <li class="step"><div class="snum">3</div><div class="stxt">Gere 2ª via do boleto ou selecione parcelamento disponível</div></li>
+          <li class="step"><div class="snum">4</div><div class="stxt">Efetue o pagamento via boleto, PIX ou cartão</div></li>
+          <li class="step"><div class="snum">5</div><div class="stxt">Baixa automática em até 2 dias úteis</div></li>
+        </ul>
+        <div class="notice nb">ℹ️ Programa <strong>Anuidade de Volta</strong> disponível para resgate de benefícios ao usar serviços OAB/SP.</div>
+        <div class="chips"><span class="chip cg">Online</span><span class="chip cp">Área restrita</span></div>
+        <div class="links"><a class="lk lb" href="https://www.oabsp.org.br/servicos/financeiro" target="_blank">↗ Área Financeira</a></div>
+        <div class="msgbox">
+          <div class="msgbox-top"><span class="msgbox-label"><span>Mensagem</span> · Anuidade</span><button class="copy-btn" onclick="cp(this)">Copiar</button></div>
+          <div class="msgbox-body">Prezado(a) Dr(a). [NOME],
+
+Para verificar ou pagar a anuidade OAB/SP:
+
+1. Acesse oabsp.org.br → 🔒 → faça login
+2. No menu, clique em "Financeiro"
+3. Visualize os débitos e gere a 2ª via do boleto se necessário
+4. Efetue o pagamento (boleto, PIX ou cartão)
+5. A baixa ocorre automaticamente em até 2 dias úteis
+
+Dúvidas: (11) 3291-3777
+Subseção OAB/SP — Santana de Parnaíba</div>
+        </div>
+      </div>
     </div>
 
-    <div class="grid2">
-      <div class="canal-card">
-        <div class="canal-header">
-          <div class="canal-icon wpp">💬</div>
+    <div class="card">
+      <div class="card-head"><div class="ch-icon" style="background:#EDF7F2;">🤰</div><div><div class="ch-title">Isenção Gestante / Adotante</div><div class="ch-sub">Isenção proporcional de anuidade</div></div></div>
+      <div class="card-body">
+        <ul class="steps">
+          <li class="step"><div class="snum">1</div><div class="stxt">Acesse <em>oabsp.org.br</em> → 🔒 → login → <em>"Isenção Gestante/Adotante"</em></div></li>
+          <li class="step"><div class="snum">2</div><div class="stxt">Preencha o requerimento com data prevista de parto ou adoção</div></li>
+          <li class="step"><div class="snum">3</div><div class="stxt">Anexe laudo médico (gestação) ou termo de adoção</div></li>
+          <li class="step"><div class="snum">4</div><div class="stxt">Aguarde análise e confirmação por e-mail</div></li>
+        </ul>
+        <div class="notice ng">✓ Advogada gestante tem direito à isenção proporcional da anuidade.</div>
+        <div class="chips"><span class="chip cg">Online</span><span class="chip cg">Gratuito</span><span class="chip cp">Área restrita</span></div>
+        <div class="msgbox">
+          <div class="msgbox-top"><span class="msgbox-label"><span>Mensagem</span> · Isenção Gestante</span><button class="copy-btn" onclick="cp(this)">Copiar</button></div>
+          <div class="msgbox-body">Prezada Dra. [NOME],
+
+Para solicitar isenção de anuidade por gestação ou adoção:
+
+1. Acesse oabsp.org.br → 🔒 → faça login
+2. No menu, clique em "Isenção Gestante/Adotante"
+3. Preencha o requerimento com a data prevista de parto ou adoção
+4. Anexe laudo médico ou termo de adoção
+5. Aguarde a confirmação por e-mail
+
+Subseção OAB/SP — Santana de Parnaíba</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-head"><div class="ch-icon" style="background:#EEF3FC;">🏛️</div><div><div class="ch-title">INSS Digital</div><div class="ch-sub">Requerimento de benefícios previdenciários</div></div></div>
+      <div class="card-body">
+        <ul class="steps">
+          <li class="step"><div class="snum">1</div><div class="stxt">Acesse <em>oabsp.org.br</em> → Serviços → <em>"INSS Digital"</em></div></li>
+          <li class="step"><div class="snum">2</div><div class="stxt">Faça login com certificado digital A3 ou senha gov.br</div></li>
+          <li class="step"><div class="snum">3</div><div class="stxt">Selecione o tipo de benefício previdenciário</div></li>
+          <li class="step"><div class="snum">4</div><div class="stxt">Anexe digitalmente a documentação do cliente</div></li>
+          <li class="step"><div class="snum">5</div><div class="stxt">Acompanhe o andamento pelo portal Meu INSS</div></li>
+        </ul>
+        <div class="notice na">⚠️ Obrigatório certificado digital ou procuração eletrônica cadastrada no INSS.</div>
+        <div class="chips"><span class="chip cg">Online</span><span class="chip cg">Gratuito</span></div>
+        <div class="links"><a class="lk lb" href="https://www.oabsp.org.br/servicos/inss-digital/home" target="_blank">↗ INSS Digital</a></div>
+        <div class="msgbox">
+          <div class="msgbox-top"><span class="msgbox-label"><span>Mensagem</span> · INSS Digital</span><button class="copy-btn" onclick="cp(this)">Copiar</button></div>
+          <div class="msgbox-body">Prezado(a) Dr(a). [NOME],
+
+Para acessar o INSS Digital via OAB/SP:
+
+1. Acesse oabsp.org.br → Serviços → "INSS Digital"
+2. Faça login com certificado digital A3 ou senha gov.br
+3. Selecione o tipo de benefício previdenciário
+4. Anexe a documentação digital do cliente
+5. Acompanhe pelo portal Meu INSS
+
+Necessário: certificado digital ou procuração eletrônica cadastrada no INSS.
+Subseção OAB/SP — Santana de Parnaíba</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-head"><div class="ch-icon" style="background:#EDF7F2;">🔓</div><div><div class="ch-title">Alvarás / Pagamentos JEF</div><div class="ch-sub">Levantamento de valores · honorários federais</div></div></div>
+      <div class="card-body">
+        <ul class="steps">
+          <li class="step"><div class="snum">1</div><div class="stxt">Acesse <em>oabsp.org.br</em> → 🔒 → login → <em>"Resgate de Alvarás"</em> ou <em>"Pagamentos JEF"</em></div></li>
+          <li class="step"><div class="snum">2</div><div class="stxt">Informe o número do processo e vara (alvarás) ou CPF do assistido (JEF)</div></li>
+          <li class="step"><div class="snum">3</div><div class="stxt">Comprove representação com procuração atualizada</div></li>
+          <li class="step"><div class="snum">4</div><div class="stxt">Alvarás: apresente o original na instituição financeira. JEF: confirme dados bancários</div></li>
+        </ul>
+        <div class="chips"><span class="chip cg">Consulta online</span><span class="chip ca">Presencial p/ alvarás</span><span class="chip cp">Área restrita</span></div>
+        <div class="msgbox">
+          <div class="msgbox-top"><span class="msgbox-label"><span>Mensagem</span> · Alvarás / JEF</span><button class="copy-btn" onclick="cp(this)">Copiar</button></div>
+          <div class="msgbox-body">Prezado(a) Dr(a). [NOME],
+
+Para resgate de alvarás ou honorários JEF:
+
+1. Acesse oabsp.org.br → 🔒 → faça login
+2. Selecione "Resgate de Alvarás" ou "Pagamentos JEF"
+3. Informe o número do processo e vara de origem
+4. Tenha a procuração do cliente atualizada
+5. Para JEF: confirme ou atualize seus dados bancários
+
+Subseção OAB/SP — Santana de Parnaíba</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div><!-- /financeiro -->
+
+
+<!-- ═══ CERTIDÕES ═══ -->
+<div class="pane" id="p-certidoes">
+  <div class="sec-head"><div class="sec-icon" style="background:#EEF3FC;">📄</div><div><h2>Certidões</h2><p>Acesso: <strong>oabsp.org.br → 🔒 → login → "Certidões"</strong>. Emissão eletrônica, gratuita e com validade jurídica plena.</p></div></div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-head"><div class="ch-icon" style="background:#EDF7F2;">⚡</div><div><div class="ch-title">Certidão de Inscrição — Instantânea</div><div class="ch-sub">A mais utilizada · gratuita</div></div></div>
+      <div class="card-body">
+        <ul class="steps">
+          <li class="step"><div class="snum">1</div><div class="stxt">Acesse <em>oabsp.org.br</em> → 🔒 → login → <em>"Certidões"</em></div></li>
+          <li class="step"><div class="snum">2</div><div class="stxt">Selecione <em>"Certidão de Inscrição — breve relato"</em></div></li>
+          <li class="step"><div class="snum">3</div><div class="stxt">Clique em "Emitir" — geração instantânea — baixe o PDF com código de autenticidade</div></li>
+        </ul>
+        <div class="notice ng">✓ Certidão eletrônica tem validade jurídica plena. Verificação em www2.oabsp.org.br/asp/certidoes/conferencia.asp</div>
+        <div class="chips"><span class="chip cg">Online</span><span class="chip cg">Gratuito</span><span class="chip cp">Área restrita</span></div>
+        <div class="links"><a class="lk lb" href="https://www.oabsp.org.br/servicos/certidoes" target="_blank">↗ Emitir certidão</a></div>
+        <div class="msgbox">
+          <div class="msgbox-top"><span class="msgbox-label"><span>Mensagem</span> · Certidão de Inscrição</span><button class="copy-btn" onclick="cp(this)">Copiar</button></div>
+          <div class="msgbox-body">Prezado(a) Dr(a). [NOME],
+
+Para emitir a certidão de inscrição OAB/SP (gratuita e instantânea):
+
+1. Acesse oabsp.org.br → 🔒 → faça login
+2. No menu, clique em "Certidões"
+3. Selecione "Certidão de Inscrição — breve relato"
+4. Clique em "Emitir" e baixe o PDF
+
+A certidão eletrônica tem plena validade jurídica.
+Subseção OAB/SP — Santana de Parnaíba</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-head"><div class="ch-icon" style="background:#F5F0FD;">📜</div><div><div class="ch-title">Certidão com Ética e Disciplina</div><div class="ch-sub">Concursos, aprovações e bancas</div></div></div>
+      <div class="card-body">
+        <ul class="steps">
+          <li class="step"><div class="snum">1</div><div class="stxt">Acesse <em>oabsp.org.br</em> → 🔒 → login → <em>"Certidões"</em></div></li>
+          <li class="step"><div class="snum">2</div><div class="stxt">Selecione <em>"Certidão de inteiro teor com informação de Ética e Disciplina"</em></div></li>
+          <li class="step"><div class="snum">3</div><div class="stxt">Confirme o prazo de processamento e opção de recebimento</div></li>
+          <li class="step"><div class="snum">4</div><div class="stxt">Receba por e-mail ou retire na subseção</div></li>
+        </ul>
+        <div class="notice na">⚠️ Processos em andamento no TED podem atrasar a emissão.</div>
+        <div class="chips"><span class="chip cg">Online</span><span class="chip cg">Gratuito</span></div>
+        <div class="links"><a class="lk lb" href="https://www.oabsp.org.br/servicos/certidoes" target="_blank">↗ Certidões OAB/SP</a></div>
+        <div class="msgbox">
+          <div class="msgbox-top"><span class="msgbox-label"><span>Mensagem</span> · Certidão com Ética</span><button class="copy-btn" onclick="cp(this)">Copiar</button></div>
+          <div class="msgbox-body">Prezado(a) Dr(a). [NOME],
+
+Para emitir certidão com informação de Ética e Disciplina:
+
+1. Acesse oabsp.org.br → 🔒 → faça login
+2. No menu, clique em "Certidões"
+3. Selecione "Certidão de inteiro teor com informação de Ética e Disciplina"
+4. Aguarde o prazo e receba por e-mail
+
+Processos em andamento no TED podem atrasar a emissão.
+Subseção OAB/SP — Santana de Parnaíba</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-head"><div class="ch-icon" style="background:#FEF8EE;">🔁</div><div><div class="ch-title">Certidão de Transferência — Outro Estado</div><div class="ch-sub">Mudança de seccional OAB</div></div></div>
+      <div class="card-body">
+        <ul class="steps">
+          <li class="step"><div class="snum">1</div><div class="stxt">Regularize todas as anuidades em atraso antes de solicitar</div></li>
+          <li class="step"><div class="snum">2</div><div class="stxt">Acesse <em>oabsp.org.br</em> → 🔒 → login → <em>"Certidões"</em> → "Certidão de inteiro teor suplementar ou transferência"</div></li>
+          <li class="step"><div class="snum">3</div><div class="stxt">Indique a seccional de destino no formulário</div></li>
+          <li class="step"><div class="snum">4</div><div class="stxt">Entregue a certidão na OAB do estado de destino</div></li>
+        </ul>
+        <div class="chips"><span class="chip cg">Online</span><span class="chip cg">Gratuito</span><span class="chip cp">Área restrita</span></div>
+        <div class="msgbox">
+          <div class="msgbox-top"><span class="msgbox-label"><span>Mensagem</span> · Certidão de Transferência</span><button class="copy-btn" onclick="cp(this)">Copiar</button></div>
+          <div class="msgbox-body">Prezado(a) Dr(a). [NOME],
+
+Para emitir certidão de transferência para outra seccional:
+
+1. Regularize as anuidades em atraso (obrigatório)
+2. Acesse oabsp.org.br → 🔒 → faça login
+3. Clique em "Certidões" → "Certidão de inteiro teor suplementar ou transferência"
+4. Indique a seccional de destino
+5. Entregue a certidão na OAB do estado de destino
+
+Subseção OAB/SP — Santana de Parnaíba</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div><!-- /certidoes -->
+
+
+<!-- ═══ INTIMAÇÕES ═══ -->
+<div class="pane" id="p-intimacoes">
+  <div class="sec-head"><div class="sec-icon" style="background:#EDF7F2;">🔔</div><div><h2>Consultar Intimações</h2><p>Acesso: <strong>oabsp.org.br → 🔒 → login → "Consultar Intimações" (Recorte Digital)</strong>.</p></div></div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-head"><div class="ch-icon" style="background:#EDF7F2;">📰</div><div><div class="ch-title">Recorte Digital — Configuração</div><div class="ch-sub">Publicações judiciais automáticas por e-mail</div></div></div>
+      <div class="card-body">
+        <ul class="steps">
+          <li class="step"><div class="snum">1</div><div class="stxt">Acesse <em>oabsp.org.br</em> → 🔒 → login</div></li>
+          <li class="step"><div class="snum">2</div><div class="stxt">No menu lateral, clique em <em>"Consultar Intimações"</em></div></li>
+          <li class="step"><div class="snum">3</div><div class="stxt">Cadastre variações do seu nome (com/sem acento, abreviações)</div></li>
+          <li class="step"><div class="snum">4</div><div class="stxt">Confirme o e-mail de recebimento — publicações chegarão automaticamente</div></li>
+        </ul>
+        <div class="notice ng">✓ Gratuito e por tempo indeterminado para todos os inscritos regulares.</div>
+        <div class="chips"><span class="chip cg">Online</span><span class="chip cg">Gratuito</span><span class="chip cp">Área restrita</span></div>
+        <div class="msgbox">
+          <div class="msgbox-top"><span class="msgbox-label"><span>Mensagem</span> · Recorte Digital</span><button class="copy-btn" onclick="cp(this)">Copiar</button></div>
+          <div class="msgbox-body">Prezado(a) Dr(a). [NOME],
+
+Para receber intimações automaticamente pelo Recorte Digital:
+
+1. Acesse oabsp.org.br → 🔒 → faça login
+2. No menu, clique em "Consultar Intimações"
+3. Cadastre variações do seu nome para ampliar a busca nos Diários
+4. Confirme seu e-mail de recebimento
+
+Gratuito — publicações chegam direto no seu e-mail.
+Verifique regularmente a pasta de spam.
+
+Subseção OAB/SP — Santana de Parnaíba</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-head"><div class="ch-icon" style="background:#EEF3FC;">🗂️</div><div><div class="ch-title">Diários Monitorados</div><div class="ch-sub">Cobertura dos principais tribunais SP</div></div></div>
+      <div class="card-body">
+        <ul class="ckl">
+          <li>Justiça Estadual — Capital e Interior SP</li>
+          <li>Tribunal de Impostos e Taxas (TIT)</li>
+          <li>Executivo 1 e 2 / Junta Comercial</li>
+          <li>Legislativo / Tribunal de Contas do Estado</li>
+          <li>Diário Oficial do Município de São Paulo</li>
+        </ul>
+        <div class="notice na" style="margin-top:10px;">⚠️ Busca apenas pelo nome do inscrito — não aceita busca por terceiros ou sociedades.</div>
+        <div class="msgbox" style="margin-top:8px;">
+          <div class="msgbox-top"><span class="msgbox-label"><span>Mensagem</span> · Suporte Intimações</span><button class="copy-btn" onclick="cp(this)">Copiar</button></div>
+          <div class="msgbox-body">Prezado(a) Dr(a). [NOME],
+
+Caso não esteja recebendo intimações pelo Recorte Digital, verifique:
+
+– Cadastro de variações do nome está correto no sistema
+– E-mail cadastrado está ativo (verifique pasta de spam)
+– Sua inscrição está regular na OAB/SP
+
+Suporte: (11) 3291-3777
+Subseção OAB/SP — Santana de Parnaíba</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div><!-- /intimacoes -->
+
+
+<!-- ═══ ASSISTÊNCIA JUDICIÁRIA ═══ -->
+<div class="pane" id="p-assistencia">
+  <div class="sec-head"><div class="sec-icon" style="background:#EDF7F2;">⚖️</div><div><h2>Assistência Judiciária</h2><p>Central: <strong>(11) 3349-7600 · assistencia.judiciaria@oabsp.org.br</strong>. Acesso advogados: <strong>oabsp.org.br → 🔒 → login → "Assistência Judiciária"</strong>.</p></div></div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-head"><div class="ch-icon" style="background:#EEF3FC;">👨‍⚖️</div><div><div class="ch-title">Para Advogados</div><div class="ch-sub">Credenciamento, nomeações e honorários</div></div></div>
+      <div class="card-body">
+        <ul class="steps">
+          <li class="step"><div class="snum">1</div><div class="stxt">Acesse <em>oabsp.org.br</em> → 🔒 → login → <em>"Assistência Judiciária — Advogados"</em></div></li>
+          <li class="step"><div class="snum">2</div><div class="stxt">Realize o credenciamento na Advocacia Dativa</div></li>
+          <li class="step"><div class="snum">3</div><div class="stxt">Acompanhe as nomeações recebidas pelo sistema</div></li>
+          <li class="step"><div class="snum">4</div><div class="stxt">Lance informações processuais após o atendimento</div></li>
+          <li class="step"><div class="snum">5</div><div class="stxt">Solicite os honorários devidos pela nomeação</div></li>
+        </ul>
+        <div class="chips"><span class="chip cg">Online</span><span class="chip cp">Área restrita</span></div>
+        <div class="links"><a class="lk lb" href="https://www.oabsp.org.br/servicos/assistencia-judiciaria" target="_blank">↗ Portal AJ Advogados</a></div>
+        <div class="msgbox">
+          <div class="msgbox-top"><span class="msgbox-label"><span>Mensagem</span> · AJ Advogados</span><button class="copy-btn" onclick="cp(this)">Copiar</button></div>
+          <div class="msgbox-body">Prezado(a) Dr(a). [NOME],
+
+Para acessar os serviços de Assistência Judiciária (Advocacia Dativa):
+
+1. Acesse oabsp.org.br → 🔒 → faça login
+2. No menu, clique em "Assistência Judiciária — Advogados"
+3. Realize o credenciamento na Advocacia Dativa
+4. Acompanhe nomeações e lance informações processuais
+5. Solicite os honorários das nomeações pelo sistema
+
+(11) 3349-7600 · assistencia.judiciaria@oabsp.org.br
+Subseção OAB/SP — Santana de Parnaíba</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-head"><div class="ch-icon" style="background:#EDF7F2;">🧑‍💼</div><div><div class="ch-title">Para o Assistido (Cidadão)</div><div class="ch-sub">Orientação ao cidadão hipossuficiente</div></div></div>
+      <div class="card-body">
+        <ul class="steps">
+          <li class="step"><div class="snum">1</div><div class="stxt">Compareça à <em>Subseção OAB/SP — Santana de Parnaíba</em></div></li>
+          <li class="step"><div class="snum">2</div><div class="stxt">Traga RG, CPF e comprovante de renda</div></li>
+          <li class="step"><div class="snum">3</div><div class="stxt">Informe o problema jurídico à equipe de triagem</div></li>
+          <li class="step"><div class="snum">4</div><div class="stxt">Seja encaminhado ao advogado datário responsável</div></li>
+        </ul>
+        <div class="notice nb">ℹ️ Triagem também disponível online em www2.oabsp.org.br/asp/aj/triagem.asp</div>
+        <div class="links"><a class="lk lb" href="https://www2.oabsp.org.br/asp/aj/triagem.asp" target="_blank">↗ Triagem Online</a></div>
+        <div class="msgbox">
+          <div class="msgbox-top"><span class="msgbox-label"><span>Mensagem</span> · AJ para Assistido</span><button class="copy-btn" onclick="cp(this)">Copiar</button></div>
+          <div class="msgbox-body">Prezado(a) [NOME],
+
+Para ser atendido pela Assistência Judiciária Gratuita da OAB/SP:
+
+1. Compareça à Subseção OAB/SP — Santana de Parnaíba
+2. Traga RG, CPF e comprovante de renda
+3. Informe seu problema jurídico à equipe de triagem
+4. Aguarde o encaminhamento ao advogado responsável
+
+Triagem online disponível: www2.oabsp.org.br/asp/aj/triagem.asp
+
+Subseção OAB/SP — Santana de Parnaíba</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div><!-- /assistencia -->
+
+
+<!-- ═══ TRIBUNAL DE ÉTICA ═══ -->
+<div class="pane" id="p-etica">
+  <div class="sec-head"><div class="sec-icon" style="background:#FEF1F1;">🏛️</div><div><h2>Tribunal de Ética e Disciplina</h2><p>Protocolo: <strong>(11) 3349-7571 · etica.atendimento@oabsp.org.br</strong>. Acesso: <strong>oabsp.org.br → Serviços → "Balcão Virtual TED OAB/SP"</strong>.</p></div></div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-head"><div class="ch-icon" style="background:#FEF1F1;">⚠️</div><div><div class="ch-title">Representação Disciplinar</div><div class="ch-sub">Infração ética praticada por advogado</div></div></div>
+      <div class="card-body">
+        <ul class="steps">
+          <li class="step"><div class="snum">1</div><div class="stxt">Acesse <em>oabsp.org.br</em> → Serviços → <em>"Balcão Virtual — TED OAB/SP"</em></div></li>
+          <li class="step"><div class="snum">2</div><div class="stxt">Clique em "Nova Representação" e preencha dados do reclamado e fatos narrados</div></li>
+          <li class="step"><div class="snum">3</div><div class="stxt">Anexe documentos comprobatórios (contratos, comunicações, procurações)</div></li>
+          <li class="step"><div class="snum">4</div><div class="stxt">Protocole e guarde o número gerado para acompanhamento</div></li>
+        </ul>
+        <div class="notice na">⚠️ Processos tramitam em sigilo legal. O reclamado tem direito ao contraditório e ampla defesa.</div>
+        <div class="chips"><span class="chip cg">Online</span><span class="chip cg">Gratuito</span></div>
+        <div class="msgbox">
+          <div class="msgbox-top"><span class="msgbox-label"><span>Mensagem</span> · Representação TED</span><button class="copy-btn" onclick="cp(this)">Copiar</button></div>
+          <div class="msgbox-body">Prezado(a) [NOME],
+
+Para registrar uma representação disciplinar no Tribunal de Ética da OAB/SP:
+
+1. Acesse oabsp.org.br → Serviços → "Balcão Virtual — TED OAB/SP"
+2. Clique em "Nova Representação"
+3. Informe o nome e número OAB do reclamado e narre os fatos
+4. Anexe documentos comprobatórios
+5. Protocole e guarde o número de protocolo
+
+(11) 3349-7571 · etica.atendimento@oabsp.org.br
+Subseção OAB/SP — Santana de Parnaíba</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-head"><div class="ch-icon" style="background:#FEF8EE;">🛡️</div><div><div class="ch-title">Desagravo Profissional</div><div class="ch-sub">Violação de prerrogativas do advogado</div></div></div>
+      <div class="card-body">
+        <ul class="steps">
+          <li class="step"><div class="snum">1</div><div class="stxt">Acesse <em>oabsp.org.br</em> → Serviços → "Outros Serviços" → <em>"Desagravo"</em></div></li>
+          <li class="step"><div class="snum">2</div><div class="stxt">Relate o fato (art. 7º EOAB) com data, local e autoridade envolvida</div></li>
+          <li class="step"><div class="snum">3</div><div class="stxt">Anexe despachos, atos ou comunicações comprobatórias</div></li>
+          <li class="step"><div class="snum">4</div><div class="stxt">Aguarde apreciação pela Comissão de Direitos e Prerrogativas</div></li>
+        </ul>
+        <div class="notice nb">ℹ️ O desagravo público pode resultar em nota oficial da OAB/SP.</div>
+        <div class="chips"><span class="chip cg">Online</span><span class="chip cg">Gratuito</span></div>
+        <div class="links"><a class="lk lb" href="https://www.oabsp.org.br/servicos/outros-servicos" target="_blank">↗ Desagravo OAB/SP</a></div>
+        <div class="msgbox">
+          <div class="msgbox-top"><span class="msgbox-label"><span>Mensagem</span> · Desagravo</span><button class="copy-btn" onclick="cp(this)">Copiar</button></div>
+          <div class="msgbox-body">Prezado(a) Dr(a). [NOME],
+
+Para solicitar desagravo por violação de prerrogativas:
+
+1. Acesse oabsp.org.br → Serviços → "Outros Serviços" → "Desagravo"
+2. Relate o fato com data, local e autoridade envolvida
+3. Anexe documentos que comprovem a violação
+4. Aguarde análise pela Comissão de Direitos e Prerrogativas
+
+Subseção OAB/SP — Santana de Parnaíba</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div><!-- /etica -->
+
+
+<!-- ═══ PROCESSO ELETRÔNICO ═══ -->
+<div class="pane" id="p-processo">
+  <div class="sec-head"><div class="sec-icon" style="background:#EEF3FC;">🖥️</div><div><h2>Processo Eletrônico</h2><p>Guia completo: <strong>oabsp.org.br → Serviços → "Processo Eletrônico" → "Links Úteis"</strong>.</p></div></div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-head"><div class="ch-icon" style="background:#EEF3FC;">⚖️</div><div><div class="ch-title">PJe / e-SAJ — Justiça Estadual SP</div><div class="ch-sub">Peticionamento eletrônico TJSP</div></div></div>
+      <div class="card-body">
+        <ul class="steps">
+          <li class="step"><div class="snum">1</div><div class="stxt">Acesse <em>oabsp.org.br</em> → Serviços → "Processo Eletrônico" → "Links Úteis"</div></li>
+          <li class="step"><div class="snum">2</div><div class="stxt">Selecione o tribunal desejado na lista categorizada</div></li>
+          <li class="step"><div class="snum">3</div><div class="stxt">Autentique com certificado digital A3 ou credenciais gov.br</div></li>
+        </ul>
+        <div class="notice nb">ℹ️ Salas da Advocacia nos fóruns oferecem suporte presencial ao e-SAJ e PJe.</div>
+        <div class="chips"><span class="chip cg">Online</span><span class="chip cg">Gratuito</span></div>
+        <div class="links"><a class="lk lb" href="https://www.oabsp.org.br/servicos/processo-eletronico/links-uteis-processo-judicial-eletronico-peticionamento-cursos-manuais-e-tutoriais" target="_blank">↗ Links e Tutoriais</a></div>
+        <div class="msgbox">
+          <div class="msgbox-top"><span class="msgbox-label"><span>Mensagem</span> · PJe / e-SAJ</span><button class="copy-btn" onclick="cp(this)">Copiar</button></div>
+          <div class="msgbox-body">Prezado(a) Dr(a). [NOME],
+
+Para acessar os sistemas de processo eletrônico (PJe / e-SAJ):
+
+1. Acesse oabsp.org.br → Serviços → "Processo Eletrônico" → "Links Úteis"
+2. Selecione o tribunal desejado
+3. Autentique com certificado digital A3 ou credenciais gov.br
+
+Nas Salas da Advocacia nos fóruns há suporte presencial para uso dos sistemas.
+
+Subseção OAB/SP — Santana de Parnaíba</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-head"><div class="ch-icon" style="background:#FEF8EE;">🏢</div><div><div class="ch-title">PJe-JT — Justiça do Trabalho</div><div class="ch-sub">TRT2, TRT15 e TST</div></div></div>
+      <div class="card-body">
+        <div class="two">
           <div>
-            <div class="canal-titulo">WhatsApp</div>
-            <span class="canal-badge ouro">Principal</span>
+            <p class="slabel">TRT 2ª Região (Capital)</p>
+            <ul class="ckl"><li>PJe-JT: trt2.jus.br</li><li>Sisdoc: trtsp.jus.br</li><li>e-DOC: tst.jus.br</li></ul>
           </div>
-        </div>
-        <ul class="lista">
-          <li>Abordagem individual 1 a 1 para perfis prioritários</li>
-          <li>Grupos de filiados da Subseção</li>
-          <li>Status e Stories com artes do curso</li>
-          <li>Follow-up automático antes do prazo final</li>
-        </ul>
-      </div>
-      <div class="canal-card">
-        <div class="canal-header">
-          <div class="canal-icon email">✉️</div>
           <div>
-            <div class="canal-titulo">E-mail</div>
-            <span class="canal-badge">Formal</span>
+            <p class="slabel">TRT 15ª e TST</p>
+            <ul class="ckl"><li>portal.trt15.jus.br</li><li>aplicacao3.tst.jus.br</li></ul>
           </div>
         </div>
-        <ul class="lista">
-          <li>Lista completa de filiados cadastrados</li>
-          <li>Comunicado oficial com identidade OAB</li>
-          <li>Ideal para abertura e alerta de prazo final</li>
-          <li>Rastreável — dá para medir abertura e cliques</li>
+        <div class="chips" style="margin-top:10px;"><span class="chip cg">Online</span><span class="chip cg">Gratuito</span></div>
+        <div class="msgbox" style="margin-top:8px;">
+          <div class="msgbox-top"><span class="msgbox-label"><span>Mensagem</span> · PJe Trabalhista</span><button class="copy-btn" onclick="cp(this)">Copiar</button></div>
+          <div class="msgbox-body">Prezado(a) Dr(a). [NOME],
+
+Links de acesso ao PJe-JT (Justiça do Trabalho):
+
+TRT 2ª Região (SP Capital): trt2.jus.br
+TRT 15ª Região (Campinas): portal.trt15.jus.br
+TST — Visualização de autos: aplicacao3.tst.jus.br
+
+Use seu certificado digital A3 para autenticar.
+
+Lista completa: oabsp.org.br → Serviços → Processo Eletrônico → Links Úteis
+Subseção OAB/SP — Santana de Parnaíba</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div><!-- /processo -->
+
+
+<!-- ═══ OUTROS ═══ -->
+<div class="pane" id="p-outros">
+  <div class="sec-head"><div class="sec-icon" style="background:#F0F3F9;">🔧</div><div><h2>Outros Serviços</h2><p>Agendamento, ouvidoria, consulta de documentos e parcerias.</p></div></div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-head"><div class="ch-icon" style="background:#EEF3FC;">📅</div><div><div class="ch-title">Agendamento Online</div><div class="ch-sub">Inscrição, carteiras, certificação</div></div></div>
+      <div class="card-body">
+        <ul class="steps">
+          <li class="step"><div class="snum">1</div><div class="stxt">Acesse <em>oabsp.org.br</em> → Serviços → <em>"Agendamento Online"</em></div></li>
+          <li class="step"><div class="snum">2</div><div class="stxt">Selecione o tipo de serviço desejado</div></li>
+          <li class="step"><div class="snum">3</div><div class="stxt">Escolha a subseção, data e horário disponíveis</div></li>
+          <li class="step"><div class="snum">4</div><div class="stxt">Confirme e guarde o e-mail de confirmação</div></li>
         </ul>
-      </div>
-      <div class="canal-card">
-        <div class="canal-header">
-          <div class="canal-icon presencial">🏛️</div>
-          <div>
-            <div class="canal-titulo">Presencial na Subseção</div>
-            <span class="canal-badge ouro">Alto Impacto</span>
-          </div>
+        <div class="notice ng">✓ Disponível para advogados, estagiários e público geral.</div>
+        <div class="chips"><span class="chip cg">Online</span><span class="chip cg">Gratuito</span></div>
+        <div class="links"><a class="lk lb" href="https://www.oabsp.org.br/servicos/agendamento-online" target="_blank">↗ Agendar</a></div>
+        <div class="msgbox">
+          <div class="msgbox-top"><span class="msgbox-label"><span>Mensagem</span> · Agendamento</span><button class="copy-btn" onclick="cp(this)">Copiar</button></div>
+          <div class="msgbox-body">Prezado(a) Dr(a). [NOME],
+
+Para agendar atendimento presencial na OAB/SP:
+
+1. Acesse oabsp.org.br → Serviços → "Agendamento Online"
+2. Selecione o serviço desejado
+3. Escolha a subseção, data e horário
+4. Confirme e guarde o e-mail de confirmação
+
+Subseção OAB/SP — Santana de Parnaíba</div>
         </div>
-        <ul class="lista">
-          <li>Abordagem no balcão durante atendimento diário</li>
-          <li>Cartaz e flyer no mural de avisos</li>
-          <li>Conversa durante eventos e reuniões</li>
-          <li>Inscrição assistida na hora, sem burocracia</li>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-head"><div class="ch-icon" style="background:#EDF7F2;">📊</div><div><div class="ch-title">Consulta de Documentos</div><div class="ch-sub">Acompanhar solicitações em andamento</div></div></div>
+      <div class="card-body">
+        <ul class="steps">
+          <li class="step"><div class="snum">1</div><div class="stxt">Acesse <em>oabsp.org.br</em> → Serviços → <em>"Consulta Documentos"</em></div></li>
+          <li class="step"><div class="snum">2</div><div class="stxt">Informe o número do protocolo do documento solicitado</div></li>
+          <li class="step"><div class="snum">3</div><div class="stxt">Visualize o status: recebido, em análise, aprovado ou disponível para retirada</div></li>
         </ul>
-      </div>
-      <div class="canal-card">
-        <div class="canal-header">
-          <div class="canal-icon insta">📸</div>
-          <div>
-            <div class="canal-titulo">Instagram / Redes</div>
-            <span class="canal-badge">Alcance</span>
-          </div>
+        <div class="notice nb">ℹ️ Serve para rastrear certidões, carteiras e outros documentos solicitados à OAB/SP.</div>
+        <div class="chips"><span class="chip cg">Online</span><span class="chip cg">Gratuito</span></div>
+        <div class="links"><a class="lk lb" href="https://www.oabsp.org.br/servicos/consulta-documentos" target="_blank">↗ Consultar documento</a></div>
+        <div class="msgbox">
+          <div class="msgbox-top"><span class="msgbox-label"><span>Mensagem</span> · Consulta de Documentos</span><button class="copy-btn" onclick="cp(this)">Copiar</button></div>
+          <div class="msgbox-body">Prezado(a) Dr(a). [NOME],
+
+Para acompanhar um documento solicitado à OAB/SP:
+
+1. Acesse oabsp.org.br → Serviços → "Consulta Documentos"
+2. Informe o número do protocolo recebido
+3. Visualize o status atual
+
+Subseção OAB/SP — Santana de Parnaíba</div>
         </div>
-        <ul class="lista">
-          <li>Perfil oficial da Subseção no Instagram</li>
-          <li>Post de lançamento com arte institucional</li>
-          <li>Stories com link de inscrição e contagem regressiva</li>
-          <li>Repost de depoimentos de egressos ESA</li>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-head"><div class="ch-icon" style="background:#FEF8EE;">📢</div><div><div class="ch-title">Ouvidoria</div><div class="ch-sub">Sugestões, críticas e denúncias institucionais</div></div></div>
+      <div class="card-body">
+        <ul class="steps">
+          <li class="step"><div class="snum">1</div><div class="stxt">Acesse <em>oabsp.org.br</em> → Serviços → <em>"Ouvidoria"</em></div></li>
+          <li class="step"><div class="snum">2</div><div class="stxt">Escolha o tipo: elogio, sugestão, crítica ou denúncia</div></li>
+          <li class="step"><div class="snum">3</div><div class="stxt">Descreva o fato com data, local e pessoas envolvidas</div></li>
+          <li class="step"><div class="snum">4</div><div class="stxt">Informe e-mail para retorno (aceita anônimo) e guarde o protocolo</div></li>
         </ul>
-      </div>
-    </div>
+        <div class="chips"><span class="chip cg">Online</span><span class="chip cg">Gratuito</span></div>
+        <div class="links"><a class="lk lb" href="https://www.oabsp.org.br/servicos/ouvidoria" target="_blank">↗ Ouvidoria OAB/SP</a></div>
+        <div class="msgbox">
+          <div class="msgbox-top"><span class="msgbox-label"><span>Mensagem</span> · Ouvidoria</span><button class="copy-btn" onclick="cp(this)">Copiar</button></div>
+          <div class="msgbox-body">Prezado(a) Dr(a). [NOME],
 
-    <div class="card" style="margin-top:0.5rem;">
-      <div class="card-header">
-        <div class="card-icon">📅</div>
-        <div class="card-title">Calendário de Ações por Turma</div>
-      </div>
-      <div class="cal-row">
-        <div class="cal-dia">D–14<span>abertura</span></div>
-        <div class="cal-info">
-          <h4>Lançamento oficial das inscrições</h4>
-          <p>E-mail para todos os filiados + post no Instagram + mensagem nos grupos de WhatsApp</p>
-        </div>
-      </div>
-      <div class="cal-row">
-        <div class="cal-dia">D–10<span>ativo</span></div>
-        <div class="cal-info">
-          <h4>Abordagem individual ativa</h4>
-          <p>WhatsApp 1 a 1 para perfis prioritários: recém-inscritos, sem especialização, ativos no balcão</p>
-        </div>
-      </div>
-      <div class="cal-row">
-        <div class="cal-dia">D–5<span>lembrete</span></div>
-        <div class="cal-info">
-          <h4>Lembrete geral com urgência</h4>
-          <p>Segundo e-mail + Stories com vagas restantes + cartaz atualizado no mural da Subseção</p>
-        </div>
-      </div>
-      <div class="cal-row">
-        <div class="cal-dia">D–2<span>urgência</span></div>
-        <div class="cal-info">
-          <h4>Fechamento para quem demonstrou interesse</h4>
-          <p>WhatsApp individual para quem respondeu mas não inscreveu. Oferta de ajuda imediata para concluir a inscrição.</p>
-        </div>
-      </div>
-      <div class="cal-row">
-        <div class="cal-dia">D+7<span>pós-venda</span></div>
-        <div class="cal-info">
-          <h4>Pós-venda e fidelização</h4>
-          <p>Mensagem de boas-vindas, reforço da boa decisão, pedido de indicação de colegas ainda não inscritos.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+Para registrar uma manifestação na Ouvidoria da OAB/SP:
 
-  <!-- ===== METAS ===== -->
-  <section id="metas" class="section">
-    <div class="hero-card">
-      <h2>Metas, KPIs e Checklist de Lançamento</h2>
-      <p>O que medir, como acompanhar e o que verificar antes de cada divulgação.</p>
-    </div>
+1. Acesse oabsp.org.br → Serviços → "Ouvidoria"
+2. Escolha o tipo: elogio, sugestão, crítica ou denúncia
+3. Descreva o fato com data, local e pessoas envolvidas
+4. Informe e-mail para retorno (ou envie anonimamente)
+5. Guarde o número de protocolo gerado
 
-    <div class="metrics-row">
-      <div class="metric-card">
-        <div class="metric-num">30%</div>
-        <div class="metric-label">taxa de abertura de e-mail (meta por turma)</div>
-      </div>
-      <div class="metric-card">
-        <div class="metric-num">15%</div>
-        <div class="metric-label">conversão de contatos abordados em inscritos</div>
-      </div>
-      <div class="metric-card">
-        <div class="metric-num">3×</div>
-        <div class="metric-label">pontos de contato por advogado antes do prazo</div>
-      </div>
-    </div>
-
-    <div class="grid2">
-      <div class="card">
-        <div class="card-header">
-          <div class="card-icon">📊</div>
-          <div class="card-title">KPIs para Acompanhar</div>
-        </div>
-        <ul class="kpi-list">
-          <li><span class="kpi-dot"></span>Total de filiados contactados por turma</li>
-          <li><span class="kpi-dot"></span>Nº de respostas e interesse manifestado</li>
-          <li><span class="kpi-dot"></span>Nº de inscrições geradas pela Subseção</li>
-          <li><span class="kpi-dot"></span>Nº de inscrições após follow-up de D–2</li>
-          <li><span class="kpi-dot"></span>Canal de origem de cada inscrição</li>
-          <li><span class="kpi-dot"></span>Feedback dos inscritos após conclusão do curso</li>
-          <li><span class="kpi-dot"></span>Taxa de reinscrição (segundo curso)</li>
-        </ul>
-      </div>
-      <div class="card">
-        <div class="card-header">
-          <div class="card-icon">✅</div>
-          <div class="card-title">Checklist de Lançamento</div>
-        </div>
-        <div id="checklist">
-          <div class="checklist-item"><div class="check-box" onclick="toggleCheck(this)"></div>Catálogo de cursos atualizado recebido da ESA</div>
-          <div class="checklist-item"><div class="check-box" onclick="toggleCheck(this)"></div>Lista de filiados segmentada por área de atuação</div>
-          <div class="checklist-item"><div class="check-box" onclick="toggleCheck(this)"></div>Templates de mensagem preenchidos com dados do curso</div>
-          <div class="checklist-item"><div class="check-box" onclick="toggleCheck(this)"></div>Link de inscrição testado e funcionando</div>
-          <div class="checklist-item"><div class="check-box" onclick="toggleCheck(this)"></div>Arte para Instagram e WhatsApp Status criada</div>
-          <div class="checklist-item"><div class="check-box" onclick="toggleCheck(this)"></div>Calendário de disparos definido e programado</div>
-          <div class="checklist-item"><div class="check-box" onclick="toggleCheck(this)"></div>Planilha de acompanhamento de contatos aberta</div>
+Subseção OAB/SP — Santana de Parnaíba</div>
         </div>
       </div>
     </div>
 
-    <div class="argumento">
-      <p>A OAB não é só uma obrigação — é uma estrutura que trabalha por você. A ESA é a prova disso: capacitação de qualidade, com certificado que o mercado respeita, a um custo que nenhuma faculdade ou plataforma privada consegue oferecer. Sua Subseção está aqui para facilitar esse acesso. Aproveite enquanto há vaga.</p>
-      <div class="attr">Argumento final de fechamento — use sempre que necessário</div>
-    </div>
-  </section>
+  </div>
+</div><!-- /outros -->
 
 </main>
 
-<footer class="site-footer">
-  247ª Subseção OAB • Santana de Parnaíba — SP &nbsp;|&nbsp; Estratégia de Vendas <span>ESA/OAB</span> &nbsp;|&nbsp; Uso interno
-</footer>
-
 <script>
-function showTab(id, btn) {
-  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-  btn.classList.add('active');
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-function copiarMsg(btn) {
-  const box = btn.closest('.msg-wrapper').querySelector('.msg-box');
-  navigator.clipboard.writeText(box.innerText).then(() => {
-    btn.textContent = '✓ Copiado!';
-    btn.classList.add('copiado');
-    setTimeout(() => { btn.textContent = 'Copiar'; btn.classList.remove('copiado'); }, 2000);
+document.querySelectorAll('.tab').forEach(t => {
+  t.addEventListener('click', () => {
+    document.querySelectorAll('.tab').forEach(x => x.classList.remove('on'));
+    document.querySelectorAll('.pane').forEach(x => x.classList.remove('on'));
+    t.classList.add('on');
+    document.getElementById('p-' + t.dataset.p).classList.add('on');
   });
-}
+});
 
-function copiarMsgEmail(btn) {
-  const wrapper = btn.closest('.msg-wrapper');
-  const assunto = wrapper.querySelector('.assunto-line').innerText;
-  const corpo = wrapper.querySelector('.msg-box').innerText;
-  navigator.clipboard.writeText(assunto + '\n\n' + corpo).then(() => {
-    btn.textContent = '✓ Copiado!';
-    btn.classList.add('copiado');
-    setTimeout(() => { btn.textContent = 'Copiar'; btn.classList.remove('copiado'); }, 2000);
+function cp(btn) {
+  const txt = btn.closest('.msgbox').querySelector('.msgbox-body').innerText;
+  navigator.clipboard.writeText(txt).then(() => {
+    const orig = btn.innerHTML;
+    btn.innerHTML = '✓ Copiado';
+    btn.classList.add('ok');
+    setTimeout(() => { btn.innerHTML = orig; btn.classList.remove('ok'); }, 1800);
+  }).catch(() => {
+    const el = document.createElement('textarea');
+    el.value = txt; el.style.cssText = 'position:fixed;opacity:0';
+    document.body.appendChild(el); el.select();
+    try { document.execCommand('copy'); } catch(e) {}
+    document.body.removeChild(el);
+    const orig = btn.innerHTML;
+    btn.innerHTML = '✓ Copiado'; btn.classList.add('ok');
+    setTimeout(() => { btn.innerHTML = orig; btn.classList.remove('ok'); }, 1800);
   });
-}
-
-function toggleCheck(el) {
-  el.classList.toggle('checked');
 }
 </script>
 </body>
