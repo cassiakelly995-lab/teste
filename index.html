@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estratégia de Vendas — Cursos ESA/OAB | 247ª Subseção</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --azul: #0d3b6e;
+    --azul-medio: #1a5fa8;
+    --azul-claro: #d6e8f7;
+    --azul-palido: #eef5fc;
+    --ouro: #c9a84c;
+    --ouro-claro: #f5edda;
+    --texto: #1a1a2e;
+    --texto-sec: #4a5568;
+    --borda: #c9d9ec;
+    --branco: #ffffff;
+    --cinza-fundo: #f4f7fb;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Source Sans 3', sans-serif;
+    background: var(--cinza-fundo);
+    color: var(--texto);
+    min-height: 100vh;
+  }
+
+  /* HEADER */
+  .site-header {
+    background: var(--azul);
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px rgba(13,59,110,0.18);
+  }
+  .header-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+  }
+  .header-brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .header-escudo {
+    width: 38px;
+    height: 38px;
+    background: var(--ouro);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--azul);
+    flex-shrink: 0;
+  }
+  .header-titles h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.2;
+  }
+  .header-titles p {
+    font-size: 11px;
+    color: rgba(255,255,255,0.65);
+    letter-spacing: 0.04em;
+    margin-top: 1px;
+  }
+  .header-badge {
+    background: var(--ouro);
+    color: var(--azul);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+    letter-spacing: 0.03em;
+  }
+
+  /* NAV TABS */
+  .nav-tabs {
+    background: #fff;
+    border-bottom: 1px solid var(--borda);
+    position: sticky;
+    top: 64px;
+    z-index: 99;
+  }
+  .nav-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    gap: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .nav-inner::-webkit-scrollbar { display: none; }
+  .nav-tab {
+    padding: 14px 20px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--texto-sec);
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    white-space: nowrap;
+    transition: color 0.2s, border-color 0.2s;
+    letter-spacing: 0.02em;
+  }
+  .nav-tab:hover { color: var(--azul-medio); }
+  .nav-tab.active {
+    color: var(--azul);
+    border-bottom-color: var(--azul);
+    font-weight: 600;
+  }
+
+  /* MAIN */
+  .main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 2rem 4rem;
+  }
+  .section { display: none; }
+  .section.active { display: block; }
+
+  /* HERO CARD */
+  .hero-card {
+    background: var(--azul);
+    border-radius: 14px;
+    padding: 2.5rem 2.5rem 2rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-card::before {
+    content: '';
+    position: absolute;
+    right: -40px;
+    top: -40px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: rgba(201,168,76,0.12);
+  }
+  .hero-card::after {
+    content: '';
+    position: absolute;
+    right: 60px;
+    bottom: -60px;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.04);
+  }
+  .hero-card h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 8px;
+    position: relative;
+    z-index: 1;
+  }
+  .hero-card p {
+    font-size: 14px;
+    color: rgba(255,255,255,0.72);
+    max-width: 560px;
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+  }
+  .hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 1.2rem;
+    position: relative;
+    z-index: 1;
+  }
+  .hero-tag {
+    background: rgba(255,255,255,0.12);
+    color: rgba(255,255,255,0.85);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 20px;
+    font-size: 11px;
+    padding: 4px 12px;
+    letter-spacing: 0.03em;
+  }
+
+  /* GRID DE MÉTRICAS */
+  .metrics-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .metric-card {
+    background: #fff;
+    border: 1px solid var(--borda);
+    border-radius: 10px;
+    padding: 1.2rem 1rem;
+    text-align: center;
+    border-top: 3px solid var(--azul-medio);
+  }
+  .metric-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--azul);
+  }
+  .metric-label {
+    font-size: 12px;
+    color: var(--texto-sec);
+    margin-top: 4px;
+    line-height: 1.4;
+  }
+
+  /* CARDS */
+  .card {
+    background: #fff;
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+    padding: 1.4rem 1.6rem;
+    margin-bottom: 1rem;
+  }
+  .card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid var(--azul-claro);
+  }
+  .card-icon {
+    width: 34px;
+    height: 34px;
+    background: var(--azul-palido);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--azul);
+    font-size: 17px;
+    flex-shrink: 0;
+  }
+  .card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--azul);
+  }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  @media (max-width: 650px) { .grid2 { grid-template-columns: 1fr; } }
+
+  /* LISTA */
+  .lista { list-style: none; }
+  .lista li {
+    font-size: 14px;
+    color: var(--texto-sec);
+    padding: 6px 0;
+    border-bottom: 1px solid var(--cinza-fundo);
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    line-height: 1.5;
+  }
+  .lista li:last-child { border-bottom: none; }
+  .lista li::before {
+    content: '▸';
+    color: var(--azul-medio);
+    font-size: 12px;
+    margin-top: 2px;
+    flex-shrink: 0;
+  }
+
+  /* ETAPAS FUNIL */
+  .etapas { display: flex; flex-direction: column; gap: 0; }
+  .etapa {
+    display: flex;
+    gap: 0;
+    position: relative;
+  }
+  .etapa-linha {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 48px;
+    flex-shrink: 0;
+  }
+  .etapa-num {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--azul);
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+  }
+  .etapa-conector {
+    width: 2px;
+    flex: 1;
+    background: var(--azul-claro);
+    min-height: 24px;
+  }
+  .etapa:last-child .etapa-conector { display: none; }
+  .etapa-body {
+    padding: 0 0 1.6rem 1rem;
+    flex: 1;
+  }
+  .etapa-body h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--azul);
+    margin-bottom: 4px;
+  }
+  .etapa-body p {
+    font-size: 13px;
+    color: var(--texto-sec);
+    line-height: 1.55;
+  }
+  .etapa-tag {
+    display: inline-block;
+    font-size: 10px;
+    background: var(--azul-claro);
+    color: var(--azul);
+    border-radius: 4px;
+    padding: 2px 7px;
+    margin-bottom: 5px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  /* TEXTOS / MSG BOXES */
+  .msg-wrapper { margin-bottom: 1.4rem; }
+  .msg-label-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6px;
+  }
+  .msg-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--azul);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .copy-btn {
+    font-size: 11px;
+    border: 1px solid var(--borda);
+    border-radius: 5px;
+    padding: 3px 12px;
+    background: #fff;
+    color: var(--azul-medio);
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.15s, color 0.15s;
+  }
+  .copy-btn:hover { background: var(--azul-palido); color: var(--azul); }
+  .copy-btn.copiado { background: var(--azul); color: #fff; border-color: var(--azul); }
+  .msg-box {
+    background: var(--azul-palido);
+    border-left: 4px solid var(--azul-medio);
+    border-radius: 0 10px 10px 0;
+    padding: 1rem 1.2rem;
+    font-size: 13.5px;
+    color: var(--texto);
+    line-height: 1.7;
+    white-space: pre-wrap;
+  }
+  .assunto-line {
+    font-size: 12px;
+    color: var(--azul);
+    background: var(--azul-claro);
+    border-radius: 5px;
+    padding: 4px 10px;
+    margin-bottom: 8px;
+    display: inline-block;
+    font-weight: 600;
+  }
+
+  /* OBJEÇÕES */
+  .objecao {
+    border: 1px solid var(--borda);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 0.85rem;
+  }
+  .objecao-q {
+    background: var(--azul-palido);
+    padding: 0.85rem 1.2rem;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--azul);
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .objecao-q::before { content: '❝'; color: var(--ouro); font-size: 18px; flex-shrink: 0; line-height: 1; }
+  .objecao-r {
+    padding: 0.85rem 1.2rem;
+    font-size: 13.5px;
+    color: var(--texto-sec);
+    line-height: 1.6;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .objecao-r::before { content: '→'; color: var(--azul-medio); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+
+  /* CANAIS */
+  .canal-card {
+    background: #fff;
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+    padding: 1.4rem;
+    margin-bottom: 1rem;
+  }
+  .canal-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 1rem;
+  }
+  .canal-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+  .canal-icon.wpp { background: #e8f5e9; color: #388e3c; }
+  .canal-icon.email { background: var(--azul-palido); color: var(--azul); }
+  .canal-icon.presencial { background: var(--ouro-claro); color: #7a5c00; }
+  .canal-icon.insta { background: #fce4ec; color: #c2185b; }
+  .canal-titulo { font-family: 'Playfair Display', serif; font-size: 15px; font-weight: 600; color: var(--azul); }
+  .canal-badge { font-size: 10px; background: var(--azul); color: #fff; border-radius: 3px; padding: 2px 7px; margin-top: 2px; display: inline-block; letter-spacing: 0.04em; }
+  .canal-badge.ouro { background: var(--ouro); color: var(--azul); }
+
+  /* CALENDÁRIO */
+  .cal-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 0.9rem 0;
+    border-bottom: 1px solid var(--cinza-fundo);
+  }
+  .cal-row:last-child { border-bottom: none; }
+  .cal-dia {
+    min-width: 52px;
+    text-align: center;
+    background: var(--azul);
+    color: #fff;
+    border-radius: 8px;
+    padding: 6px 4px;
+    font-size: 13px;
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+    flex-shrink: 0;
+  }
+  .cal-dia span { display: block; font-size: 9px; font-family: 'Source Sans 3', sans-serif; font-weight: 400; opacity: 0.8; margin-top: 1px; text-transform: uppercase; letter-spacing: 0.03em; }
+  .cal-info h4 { font-size: 13.5px; font-weight: 600; color: var(--azul); margin-bottom: 3px; }
+  .cal-info p { font-size: 13px; color: var(--texto-sec); line-height: 1.5; }
+
+  /* METAS */
+  .kpi-list { list-style: none; }
+  .kpi-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--cinza-fundo);
+    font-size: 13.5px;
+    color: var(--texto-sec);
+  }
+  .kpi-list li:last-child { border-bottom: none; }
+  .kpi-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--azul-medio);
+    flex-shrink: 0;
+  }
+  .checklist-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 7px 0;
+    border-bottom: 1px solid var(--cinza-fundo);
+    font-size: 13.5px;
+    color: var(--texto-sec);
+    line-height: 1.4;
+  }
+  .checklist-item:last-child { border-bottom: none; }
+  .check-box {
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    background: var(--azul-claro);
+    border: 1.5px solid var(--azul-medio);
+    cursor: pointer;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s;
+  }
+  .check-box.checked { background: var(--azul); border-color: var(--azul); }
+  .check-box.checked::after { content: '✓'; color: #fff; font-size: 11px; font-weight: 700; }
+
+  /* ARGUMENTO FINAL */
+  .argumento {
+    background: var(--azul);
+    border-radius: 12px;
+    padding: 1.8rem 2rem;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    margin-top: 1rem;
+  }
+  .argumento::before {
+    content: '❝';
+    position: absolute;
+    right: 1.5rem;
+    top: 0.5rem;
+    font-size: 80px;
+    color: rgba(201,168,76,0.2);
+    font-family: 'Playfair Display', serif;
+    line-height: 1;
+  }
+  .argumento p {
+    font-size: 15px;
+    line-height: 1.75;
+    color: rgba(255,255,255,0.92);
+    position: relative;
+    z-index: 1;
+  }
+  .argumento .attr {
+    font-size: 12px;
+    color: var(--ouro);
+    margin-top: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  /* FOOTER */
+  .site-footer {
+    background: var(--azul);
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    font-size: 12px;
+    padding: 1.2rem;
+    margin-top: 2rem;
+  }
+  .site-footer span { color: var(--ouro); }
+
+  /* PRINT */
+  @media print {
+    .site-header, .nav-tabs { position: static; }
+    .section { display: block !important; }
+    .nav-tabs { display: none; }
+    body { background: #fff; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-brand">
+      <div class="header-escudo">OAB</div>
+      <div class="header-titles">
+        <h1>Estratégia de Vendas — Cursos ESA</h1>
+        <p>247ª Subseção OAB • Santana de Parnaíba — SP</p>
+      </div>
+    </div>
+    <div class="header-badge">ESA/OAB</div>
+  </div>
+</header>
+
+<nav class="nav-tabs">
+  <div class="nav-inner">
+    <button class="nav-tab active" onclick="showTab('estrategia',this)">Estratégia</button>
+    <button class="nav-tab" onclick="showTab('funil',this)">Funil de Vendas</button>
+    <button class="nav-tab" onclick="showTab('textos',this)">Textos Prontos</button>
+    <button class="nav-tab" onclick="showTab('objecoes',this)">Objeções</button>
+    <button class="nav-tab" onclick="showTab('canais',this)">Canais</button>
+    <button class="nav-tab" onclick="showTab('metas',this)">Metas</button>
+  </div>
+</nav>
+
+<main class="main">
+
+  <!-- ===== ESTRATÉGIA ===== -->
+  <section id="estrategia" class="section active">
+    <div class="hero-card">
+      <h2>Venda Cursos ESA para Advogados Filiados</h2>
+      <p>A ESA é o braço de educação oficial da OAB. O advogado já paga anuidade — os cursos são o retorno concreto desse investimento. Nossa missão é fazer esse valor chegar a cada filiado da 247ª Subseção.</p>
+      <div class="hero-tags">
+        <span class="hero-tag">Certificado com Chancela OAB</span>
+        <span class="hero-tag">Filiados como público direto</span>
+        <span class="hero-tag">Venda ativa pela Subseção</span>
+        <span class="hero-tag">Baixo atrito de conversão</span>
+      </div>
+    </div>
+
+    <div class="metrics-row">
+      <div class="metric-card">
+        <div class="metric-num">3</div>
+        <div class="metric-label">pilares da proposta de valor</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-num">5</div>
+        <div class="metric-label">etapas do funil de conversão</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-num">4</div>
+        <div class="metric-label">canais de abordagem ativa</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-num">5</div>
+        <div class="metric-label">textos prontos para copiar</div>
+      </div>
+    </div>
+
+    <div class="grid2">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-icon">🎯</div>
+          <div class="card-title">Proposta de Valor Central</div>
+        </div>
+        <p style="font-size:14px;color:var(--texto-sec);line-height:1.7;">O advogado filiado à OAB <strong>já paga anuidade</strong>. Os cursos da ESA são o retorno concreto desse investimento: capacitação com credencial oficial da Ordem, reconhecida por bancas, clientes e magistrados em todo o território nacional.</p>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <div class="card-icon">💡</div>
+          <div class="card-title">Posicionamento Recomendado</div>
+        </div>
+        <p style="font-size:14px;color:var(--texto-sec);line-height:1.7;">Não venda <em>"curso"</em>. Venda <strong style="color:var(--azul)">atualização necessária com o menor custo e maior credencial disponível</strong>. O mercado jurídico muda rápido. Quem não se atualiza perde clientes para quem se atualizou.</p>
+      </div>
+    </div>
+
+    <div class="grid2">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-icon">👥</div>
+          <div class="card-title">Público-Alvo Prioritário</div>
+        </div>
+        <ul class="lista">
+          <li>Advogados recém-inscritos (0–3 anos de OAB)</li>
+          <li>Advogados sem especialização formal registrada</li>
+          <li>Advogados que frequentam eventos da Subseção</li>
+          <li>Advogados que atuam na área de interesse da ESA</li>
+          <li>Advogados que passaram por atendimento recente</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <div class="card-icon">⭐</div>
+          <div class="card-title">Diferenciais ESA a Destacar</div>
+        </div>
+        <ul class="lista">
+          <li>Certificado com selo OAB — peso real no mercado</li>
+          <li>Corpo docente: advogados e magistrados ativos</li>
+          <li>Modalidade online e presencial — flexibilidade total</li>
+          <li>Preço subsidiado exclusivo para filiados OAB</li>
+          <li>Reconhecimento nacional em bancas e escritórios</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FUNIL ===== -->
+  <section id="funil" class="section">
+    <div class="hero-card">
+      <h2>Funil de Conversão em 5 Etapas</h2>
+      <p>Da consciência do problema até a fidelização e indicação. Cada etapa tem mensagem, canal e ação específica.</p>
+    </div>
+    <div class="card">
+      <div class="etapas">
+        <div class="etapa">
+          <div class="etapa-linha">
+            <div class="etapa-num">1</div>
+            <div class="etapa-conector"></div>
+          </div>
+          <div class="etapa-body">
+            <span class="etapa-tag">Atenção</span>
+            <h4>Gerar consciência do problema</h4>
+            <p>Lembrar o advogado de que o mercado jurídico muda, que clientes pesquisam o currículo antes de contratar, e que um currículo parado trabalha contra ele. Canais: WhatsApp individual, e-mail, mural da Subseção.</p>
+          </div>
+        </div>
+        <div class="etapa">
+          <div class="etapa-linha">
+            <div class="etapa-num">2</div>
+            <div class="etapa-conector"></div>
+          </div>
+          <div class="etapa-body">
+            <span class="etapa-tag">Interesse</span>
+            <h4>Apresentar a solução ESA</h4>
+            <p>Mostrar catálogo de cursos com destaque para a área de atuação do advogado. Usar linguagem de benefício ("você sairá apto a..."), não de conteúdo ("serão abordados..."). Personalizar sempre que possível.</p>
+          </div>
+        </div>
+        <div class="etapa">
+          <div class="etapa-linha">
+            <div class="etapa-num">3</div>
+            <div class="etapa-conector"></div>
+          </div>
+          <div class="etapa-body">
+            <span class="etapa-tag">Desejo</span>
+            <h4>Criar urgência e pertencimento</h4>
+            <p>Vagas limitadas, turma com colegas da mesma região, certificado que o mercado respeita. Mostrar que outros da Subseção já estão inscritos. Aproximar: "sua colega X da 247ª já garantiu vaga."</p>
+          </div>
+        </div>
+        <div class="etapa">
+          <div class="etapa-linha">
+            <div class="etapa-num">4</div>
+            <div class="etapa-conector"></div>
+          </div>
+          <div class="etapa-body">
+            <span class="etapa-tag">Ação</span>
+            <h4>Facilitar a inscrição</h4>
+            <p>Link direto, sem burocracia. Oferecer ajuda presencial ou por WhatsApp para completar o cadastro. Remover qualquer atrito no processo. A Subseção pode fazer a inscrição assistida na hora.</p>
+          </div>
+        </div>
+        <div class="etapa">
+          <div class="etapa-linha">
+            <div class="etapa-num">5</div>
+            <div class="etapa-conector"></div>
+          </div>
+          <div class="etapa-body">
+            <span class="etapa-tag">Fidelização</span>
+            <h4>Transformar em embaixador</h4>
+            <p>Após o curso, pedir indicação. Oferecer desconto em próximo curso. Convidar para eventos da Subseção como egresso ESA. Criar comunidade de egressos — quem fez indica quem ainda não fez.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TEXTOS ===== -->
+  <section id="textos" class="section">
+    <div class="hero-card">
+      <h2>Textos Prontos — Copy de Vendas</h2>
+      <p>8 mensagens com gatilhos reais de persuasão. Substitua os campos em colchetes antes de enviar. Cada mensagem tem um objetivo específico na jornada de compra.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">💬</div>
+        <div class="card-title">WhatsApp 1 — Primeira abordagem (abertura com dor)</div>
+      </div>
+      <div class="msg-wrapper">
+        <div class="msg-label-row">
+          <span class="msg-label">Gatilho: dor + curiosidade</span>
+          <button class="copy-btn" onclick="copiarMsg(this)">Copiar</button>
+        </div>
+        <div class="msg-box">Dr(a). [Nome], boa tarde!
+
+Sou [seu nome] da 247ª Subseção OAB — Santana de Parnaíba.
+
+Tenho uma informação sobre capacitação que pode fazer diferença real na sua carteira de clientes ainda este ano.
+
+Posso te passar em 2 minutos?</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">📋</div>
+        <div class="card-title">WhatsApp 2 — Apresentação com benefício concreto</div>
+      </div>
+      <div class="msg-wrapper">
+        <div class="msg-label-row">
+          <span class="msg-label">Gatilho: prova social + autoridade + escassez</span>
+          <button class="copy-btn" onclick="copiarMsg(this)">Copiar</button>
+        </div>
+        <div class="msg-box">A ESA — Escola Superior de Advocacia da OAB — abriu inscrições para o curso de [nome do curso].
+
+Por que isso importa pra você agora?
+
+Porque cliente que pesquisa advogado no Google lê o currículo antes de ligar. Especialização com certificado OAB é o que separa quem é chamado de quem é ignorado.
+
+✅ Certificado oficial da OAB — peso que plataforma nenhuma tem
+✅ Conteúdo aplicado: quem ensina ainda atua na área
+✅ [Online / Presencial] — você encaixa na sua rotina
+✅ Valor subsidiado exclusivo para filiados da 247ª
+
+Vagas limitadas. A última turma fechou antes do prazo.
+
+Garanto sua vaga agora?</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">🔥</div>
+        <div class="card-title">WhatsApp 3 — Abordagem direta para quem já conhece a ESA</div>
+      </div>
+      <div class="msg-wrapper">
+        <div class="msg-label-row">
+          <span class="msg-label">Gatilho: urgência + perda</span>
+          <button class="copy-btn" onclick="copiarMsg(this)">Copiar</button>
+        </div>
+        <div class="msg-box">Dr(a). [Nome]!
+
+Inscrições abertas para [nome do curso] — ESA/OAB.
+
+Já temos [X] colegas da Subseção inscritos. As vagas são poucas e o prazo fecha em [data].
+
+Quem deixa pra depois normalmente perde a turma. A próxima pode demorar meses.
+
+Posso te enviar o link agora e, se quiser, te ajudo a concluir a inscrição em menos de 5 minutos.
+
+Topas?</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">✉️</div>
+        <div class="card-title">E-mail — Divulgação oficial para lista de filiados</div>
+      </div>
+      <div class="msg-wrapper">
+        <div class="msg-label-row">
+          <span class="msg-label">Gatilho: autoridade + benefício exclusivo + prazo</span>
+          <button class="copy-btn" onclick="copiarMsgEmail(this)">Copiar</button>
+        </div>
+        <div class="assunto-line">Assunto: Sua OAB está investindo na sua carreira — aproveite antes de [data]</div>
+        <div class="msg-box">Dr(a). [Nome],
+
+Você paga anuidade à OAB. A OAB tem uma obrigação com você: devolver esse investimento em valor concreto.
+
+A ESA — Escola Superior de Advocacia — é uma dessas formas. E agora está com inscrições abertas para o curso de [nome do curso].
+
+O que você leva:
+→ Certificado emitido pela própria OAB — reconhecido em todo o Brasil
+→ Professores que ainda atuam: sem teoria distante da prática real
+→ [X] horas de formação em [modalidade] — você estuda quando puder
+→ Condição de filiado: valor que nenhuma plataforma privada consegue cobrar
+
+O mercado jurídico não espera. Enquanto você adia, um colega com o mesmo certificado está sendo chamado no seu lugar.
+
+Inscrições encerram em [data]. Vagas limitadas.
+
+Garanta a sua agora: [link]
+
+Precisa de ajuda para se inscrever? Responda este e-mail ou nos chame no WhatsApp [número]. Fazemos juntos.
+
+Atenciosamente,
+[Seu nome]
+247ª Subseção OAB — Santana de Parnaíba
+[número] | [e-mail]</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">📱</div>
+        <div class="card-title">Grupo WhatsApp / Status — Post de lançamento</div>
+      </div>
+      <div class="msg-wrapper">
+        <div class="msg-label-row">
+          <span class="msg-label">Gatilho: escassez + identidade profissional</span>
+          <button class="copy-btn" onclick="copiarMsg(this)">Copiar</button>
+        </div>
+        <div class="msg-box">⚖️ ADVOGADO QUE SE ATUALIZA, FECHA MAIS CASOS.
+
+A ESA abriu inscrições para [nome do curso].
+
+📜 Certificado OAB — o que o cliente vê antes de ligar pra você
+👨‍⚖️ Docentes que atuam: direito de verdade, sem rodeio
+🕐 [Online / Presencial] — encaixa na sua rotina
+💰 Valor especial para filiados da 247ª Subseção
+
+📌 Vagas limitadas. Prazo: [data]
+👉 Inscrições: [link]
+📲 Dúvidas: [número]
+
+Sua carreira não pode esperar.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">🔁</div>
+        <div class="card-title">WhatsApp 4 — Follow-up para quem demonstrou interesse</div>
+      </div>
+      <div class="msg-wrapper">
+        <div class="msg-label-row">
+          <span class="msg-label">Gatilho: proximidade + facilidade + prazo real</span>
+          <button class="copy-btn" onclick="copiarMsg(this)">Copiar</button>
+        </div>
+        <div class="msg-box">Dr(a). [Nome], passando rapidinho.
+
+Você me perguntou sobre o curso de [área] semana passada — as inscrições fecham amanhã às [hora].
+
+Se quiser garantir, me fala aqui agora. Eu mesma te ajudo a concluir o cadastro, leva menos de 5 minutos.
+
+Não quero que você perca essa turma por falta de tempo pra se inscrever.
+
+[link]</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">⏰</div>
+        <div class="card-title">WhatsApp 5 — Último dia de inscrição (urgência máxima)</div>
+      </div>
+      <div class="msg-wrapper">
+        <div class="msg-label-row">
+          <span class="msg-label">Gatilho: última chance + consequência de não agir</span>
+          <button class="copy-btn" onclick="copiarMsg(this)">Copiar</button>
+        </div>
+        <div class="msg-box">Dr(a). [Nome] — hoje é o último dia.
+
+As inscrições para [nome do curso] fecham hoje às [hora]. Depois disso, a próxima turma não tem data prevista.
+
+Quem está inscrito já garantiu o certificado. Quem não está, vai esperar — e o mercado não espera junto.
+
+Se quiser entrar, me fala agora. Resolvo tudo aqui com você.
+
+[link]</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">🏆</div>
+        <div class="card-title">WhatsApp 6 — Pós-inscrição (confirmação e fidelização)</div>
+      </div>
+      <div class="msg-wrapper">
+        <div class="msg-label-row">
+          <span class="msg-label">Gatilho: reforço da decisão + abertura para indicação</span>
+          <button class="copy-btn" onclick="copiarMsg(this)">Copiar</button>
+        </div>
+        <div class="msg-box">Dr(a). [Nome], inscrição confirmada! 🎉
+
+Você tomou uma decisão que vai aparecer no seu currículo, nos seus contratos e na sua reputação.
+
+Qualquer dúvida sobre o curso, pode me chamar aqui.
+
+E se tiver algum colega que poderia se beneficiar também — pode indicar. Quanto mais advogados qualificados na nossa Subseção, mais forte fica a advocacia da nossa região.
+
+Bons estudos!
+[Seu nome] — 247ª Subseção OAB</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== OBJEÇÕES ===== -->
+  <section id="objecoes" class="section">
+    <div class="hero-card">
+      <h2>Respostas para as Principais Objeções</h2>
+      <p>Respostas rápidas, diretas e com base no valor real da ESA. Não desvie do argumento central: credencial OAB é insubstituível.</p>
+    </div>
+    <div class="card">
+      <div class="objecao">
+        <div class="objecao-q">Não tenho tempo para curso agora.</div>
+        <div class="objecao-r">Entendo perfeitamente. Por isso a ESA oferece modalidade online com gravações disponíveis — você assiste no horário que tiver, sem comprometer a agenda. A maioria dos colegas assiste nos intervalos ou à noite.</div>
+      </div>
+      <div class="objecao">
+        <div class="objecao-q">Já fiz vários cursos e não mudou nada na minha carreira.</div>
+        <div class="objecao-r">A diferença aqui é o certificado com chancela da OAB. Não é um curso qualquer — é a própria Ordem atestando sua qualificação. Isso tem peso real na conquista de clientes, em processos seletivos de escritórios e em bancas.</div>
+      </div>
+      <div class="objecao">
+        <div class="objecao-q">Está caro, não tenho esse dinheiro agora.</div>
+        <div class="objecao-r">O valor para filiados da OAB já é subsidiado — é o menor preço disponível para esse certificado. Se pensar em retorno: um cliente a mais cobre o investimento com folga. E o certificado fica no currículo para sempre.</div>
+      </div>
+      <div class="objecao">
+        <div class="objecao-q">Posso fazer depois, quando tiver mais tempo.</div>
+        <div class="objecao-r">As vagas são limitadas e as turmas fecham quando completam. A próxima pode ter data incerta. Garantir agora é garantir o melhor momento para começar — e não perder a oportunidade desta turma.</div>
+      </div>
+      <div class="objecao">
+        <div class="objecao-q">Não sei se esse curso é bom ou reconhecido.</div>
+        <div class="objecao-r">É desenvolvido e certificado pela Escola Superior de Advocacia, o braço oficial de educação da OAB. O corpo docente é composto por advogados e magistrados em atividade. Não existe formação mais alinhada com a prática real da advocacia no Brasil.</div>
+      </div>
+      <div class="objecao">
+        <div class="objecao-q">Faço cursos online em outras plataformas, é a mesma coisa.</div>
+        <div class="objecao-r">As outras plataformas emitem um certificado próprio. A ESA emite certificado com o selo da Ordem dos Advogados do Brasil — a entidade que regulamenta sua profissão. São pesos completamente diferentes para um cliente ou para uma banca.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CANAIS ===== -->
+  <section id="canais" class="section">
+    <div class="hero-card">
+      <h2>Canais de Abordagem e Calendário</h2>
+      <p>Use todos os canais em sequência coordenada. O impacto máximo vem da combinação, não de um canal isolado.</p>
+    </div>
+
+    <div class="grid2">
+      <div class="canal-card">
+        <div class="canal-header">
+          <div class="canal-icon wpp">💬</div>
+          <div>
+            <div class="canal-titulo">WhatsApp</div>
+            <span class="canal-badge ouro">Principal</span>
+          </div>
+        </div>
+        <ul class="lista">
+          <li>Abordagem individual 1 a 1 para perfis prioritários</li>
+          <li>Grupos de filiados da Subseção</li>
+          <li>Status e Stories com artes do curso</li>
+          <li>Follow-up automático antes do prazo final</li>
+        </ul>
+      </div>
+      <div class="canal-card">
+        <div class="canal-header">
+          <div class="canal-icon email">✉️</div>
+          <div>
+            <div class="canal-titulo">E-mail</div>
+            <span class="canal-badge">Formal</span>
+          </div>
+        </div>
+        <ul class="lista">
+          <li>Lista completa de filiados cadastrados</li>
+          <li>Comunicado oficial com identidade OAB</li>
+          <li>Ideal para abertura e alerta de prazo final</li>
+          <li>Rastreável — dá para medir abertura e cliques</li>
+        </ul>
+      </div>
+      <div class="canal-card">
+        <div class="canal-header">
+          <div class="canal-icon presencial">🏛️</div>
+          <div>
+            <div class="canal-titulo">Presencial na Subseção</div>
+            <span class="canal-badge ouro">Alto Impacto</span>
+          </div>
+        </div>
+        <ul class="lista">
+          <li>Abordagem no balcão durante atendimento diário</li>
+          <li>Cartaz e flyer no mural de avisos</li>
+          <li>Conversa durante eventos e reuniões</li>
+          <li>Inscrição assistida na hora, sem burocracia</li>
+        </ul>
+      </div>
+      <div class="canal-card">
+        <div class="canal-header">
+          <div class="canal-icon insta">📸</div>
+          <div>
+            <div class="canal-titulo">Instagram / Redes</div>
+            <span class="canal-badge">Alcance</span>
+          </div>
+        </div>
+        <ul class="lista">
+          <li>Perfil oficial da Subseção no Instagram</li>
+          <li>Post de lançamento com arte institucional</li>
+          <li>Stories com link de inscrição e contagem regressiva</li>
+          <li>Repost de depoimentos de egressos ESA</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:0.5rem;">
+      <div class="card-header">
+        <div class="card-icon">📅</div>
+        <div class="card-title">Calendário de Ações por Turma</div>
+      </div>
+      <div class="cal-row">
+        <div class="cal-dia">D–14<span>abertura</span></div>
+        <div class="cal-info">
+          <h4>Lançamento oficial das inscrições</h4>
+          <p>E-mail para todos os filiados + post no Instagram + mensagem nos grupos de WhatsApp</p>
+        </div>
+      </div>
+      <div class="cal-row">
+        <div class="cal-dia">D–10<span>ativo</span></div>
+        <div class="cal-info">
+          <h4>Abordagem individual ativa</h4>
+          <p>WhatsApp 1 a 1 para perfis prioritários: recém-inscritos, sem especialização, ativos no balcão</p>
+        </div>
+      </div>
+      <div class="cal-row">
+        <div class="cal-dia">D–5<span>lembrete</span></div>
+        <div class="cal-info">
+          <h4>Lembrete geral com urgência</h4>
+          <p>Segundo e-mail + Stories com vagas restantes + cartaz atualizado no mural da Subseção</p>
+        </div>
+      </div>
+      <div class="cal-row">
+        <div class="cal-dia">D–2<span>urgência</span></div>
+        <div class="cal-info">
+          <h4>Fechamento para quem demonstrou interesse</h4>
+          <p>WhatsApp individual para quem respondeu mas não inscreveu. Oferta de ajuda imediata para concluir a inscrição.</p>
+        </div>
+      </div>
+      <div class="cal-row">
+        <div class="cal-dia">D+7<span>pós-venda</span></div>
+        <div class="cal-info">
+          <h4>Pós-venda e fidelização</h4>
+          <p>Mensagem de boas-vindas, reforço da boa decisão, pedido de indicação de colegas ainda não inscritos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== METAS ===== -->
+  <section id="metas" class="section">
+    <div class="hero-card">
+      <h2>Metas, KPIs e Checklist de Lançamento</h2>
+      <p>O que medir, como acompanhar e o que verificar antes de cada divulgação.</p>
+    </div>
+
+    <div class="metrics-row">
+      <div class="metric-card">
+        <div class="metric-num">30%</div>
+        <div class="metric-label">taxa de abertura de e-mail (meta por turma)</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-num">15%</div>
+        <div class="metric-label">conversão de contatos abordados em inscritos</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-num">3×</div>
+        <div class="metric-label">pontos de contato por advogado antes do prazo</div>
+      </div>
+    </div>
+
+    <div class="grid2">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-icon">📊</div>
+          <div class="card-title">KPIs para Acompanhar</div>
+        </div>
+        <ul class="kpi-list">
+          <li><span class="kpi-dot"></span>Total de filiados contactados por turma</li>
+          <li><span class="kpi-dot"></span>Nº de respostas e interesse manifestado</li>
+          <li><span class="kpi-dot"></span>Nº de inscrições geradas pela Subseção</li>
+          <li><span class="kpi-dot"></span>Nº de inscrições após follow-up de D–2</li>
+          <li><span class="kpi-dot"></span>Canal de origem de cada inscrição</li>
+          <li><span class="kpi-dot"></span>Feedback dos inscritos após conclusão do curso</li>
+          <li><span class="kpi-dot"></span>Taxa de reinscrição (segundo curso)</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <div class="card-icon">✅</div>
+          <div class="card-title">Checklist de Lançamento</div>
+        </div>
+        <div id="checklist">
+          <div class="checklist-item"><div class="check-box" onclick="toggleCheck(this)"></div>Catálogo de cursos atualizado recebido da ESA</div>
+          <div class="checklist-item"><div class="check-box" onclick="toggleCheck(this)"></div>Lista de filiados segmentada por área de atuação</div>
+          <div class="checklist-item"><div class="check-box" onclick="toggleCheck(this)"></div>Templates de mensagem preenchidos com dados do curso</div>
+          <div class="checklist-item"><div class="check-box" onclick="toggleCheck(this)"></div>Link de inscrição testado e funcionando</div>
+          <div class="checklist-item"><div class="check-box" onclick="toggleCheck(this)"></div>Arte para Instagram e WhatsApp Status criada</div>
+          <div class="checklist-item"><div class="check-box" onclick="toggleCheck(this)"></div>Calendário de disparos definido e programado</div>
+          <div class="checklist-item"><div class="check-box" onclick="toggleCheck(this)"></div>Planilha de acompanhamento de contatos aberta</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="argumento">
+      <p>A OAB não é só uma obrigação — é uma estrutura que trabalha por você. A ESA é a prova disso: capacitação de qualidade, com certificado que o mercado respeita, a um custo que nenhuma faculdade ou plataforma privada consegue oferecer. Sua Subseção está aqui para facilitar esse acesso. Aproveite enquanto há vaga.</p>
+      <div class="attr">Argumento final de fechamento — use sempre que necessário</div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  247ª Subseção OAB • Santana de Parnaíba — SP &nbsp;|&nbsp; Estratégia de Vendas <span>ESA/OAB</span> &nbsp;|&nbsp; Uso interno
+</footer>
+
+<script>
+function showTab(id, btn) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function copiarMsg(btn) {
+  const box = btn.closest('.msg-wrapper').querySelector('.msg-box');
+  navigator.clipboard.writeText(box.innerText).then(() => {
+    btn.textContent = '✓ Copiado!';
+    btn.classList.add('copiado');
+    setTimeout(() => { btn.textContent = 'Copiar'; btn.classList.remove('copiado'); }, 2000);
+  });
+}
+
+function copiarMsgEmail(btn) {
+  const wrapper = btn.closest('.msg-wrapper');
+  const assunto = wrapper.querySelector('.assunto-line').innerText;
+  const corpo = wrapper.querySelector('.msg-box').innerText;
+  navigator.clipboard.writeText(assunto + '\n\n' + corpo).then(() => {
+    btn.textContent = '✓ Copiado!';
+    btn.classList.add('copiado');
+    setTimeout(() => { btn.textContent = 'Copiar'; btn.classList.remove('copiado'); }, 2000);
+  });
+}
+
+function toggleCheck(el) {
+  el.classList.toggle('checked');
+}
+</script>
+</body>
+</html>
